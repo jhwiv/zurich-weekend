@@ -2097,13 +2097,15 @@
 
 .street-view-card {
   position: relative;
-  min-height: 250px;
+  min-height: 280px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: var(--space-8);
+  background-size: cover;
+  background-position: center;
   transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
 }
 
@@ -2112,31 +2114,26 @@
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
-/* Copenhagen cards: warm gold */
+/* Copenhagen cards: fallback warm gold (shown only if image fails to load) */
 .street-view-card--cph {
-  background: linear-gradient(135deg, #c3a171 0%, #d4b68a 30%, #a68650 60%, #8b6d3f 100%);
+  background-color: #a68650;
 }
 
-/* Zürich cards: cool slate/teal */
+/* Zürich cards: fallback cool slate (shown only if image fails to load) */
 .street-view-card--zrh {
-  background: linear-gradient(135deg, #2d6a6b 0%, #3a8283 30%, #4a7a7b 60%, #1e5555 100%);
+  background-color: #2d6a6b;
 }
 
 .street-view-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.05) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
   z-index: 1;
 }
 
 .street-view-card__panorama {
-  position: absolute;
-  top: var(--space-6);
-  right: var(--space-6);
-  font-size: 48px;
-  opacity: 0.2;
-  z-index: 0;
+  display: none;
 }
 
 .street-view-card__name {
