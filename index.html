@@ -2198,7 +2198,7 @@
     }).filter(Boolean);
 
     function updateActivePill() {
-      var scrollY = window.scrollY + 200;
+      var scrollY = window.scrollY + scrollOffset + 50;
       var activeId = sectionIds[0];
 
       sectionEls.forEach(function (section) {
