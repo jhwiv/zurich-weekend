@@ -1035,15 +1035,16 @@
    ============================================================ */
 .immigration-infographic {
   max-width: var(--content-default);
-  margin: 0 auto;
+  margin: var(--space-6) auto 0;
 }
 
 /* Gradient header banner */
 .imm-header {
   background: linear-gradient(135deg, #c3a171 0%, #2d7a7b 100%);
-  padding: var(--space-8) var(--space-8) var(--space-6);
+  padding: var(--space-6) var(--space-6) var(--space-4);
   position: relative;
   overflow: hidden;
+  border-radius: 4px 4px 0 0;
 }
 
 .imm-header__eyebrow {
@@ -1093,7 +1094,7 @@
 }
 
 .imm-status-card {
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-3) var(--space-3);
   background: var(--color-cream);
   text-align: center;
   border-right: 1px solid var(--color-divider);
@@ -1137,19 +1138,20 @@
 .imm-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-  margin-top: var(--space-6);
+  gap: 1px;
+  margin-top: var(--space-4);
+  background: var(--color-divider);
+  border: 1px solid var(--color-divider);
 }
 
 .imm-info-card {
   background: var(--color-cream);
-  border: 1px solid var(--color-divider);
-  padding: var(--space-6);
+  padding: var(--space-4) var(--space-4);
 }
 
 .imm-info-card__icon {
-  font-size: 28px;
-  margin-bottom: var(--space-3);
+  font-size: 22px;
+  margin-bottom: var(--space-2);
 }
 
 .imm-info-card__eyebrow {
@@ -1185,14 +1187,15 @@
 .imm-stat-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-6);
+  gap: 1px;
+  margin-top: var(--space-4);
+  background: var(--color-divider);
+  border: 1px solid var(--color-divider);
 }
 
 .imm-stat-card {
   background: var(--color-cream);
-  border: 1px solid var(--color-divider);
-  padding: var(--space-6) var(--space-4);
+  padding: var(--space-4) var(--space-3);
   text-align: center;
 }
 
@@ -1218,8 +1221,8 @@
 
 /* Implementation timeline (horizontal) */
 .imm-timeline {
-  margin-top: var(--space-8);
-  padding: var(--space-6) 0;
+  margin-top: var(--space-4);
+  padding: var(--space-4) 0;
 }
 
 .imm-timeline__label {
@@ -1229,7 +1232,7 @@
   letter-spacing: 0.2em;
   color: var(--color-olive);
   font-weight: 600;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-3);
 }
 
 .imm-timeline__track {
@@ -1314,7 +1317,7 @@
 
 /* Numbered action checklist */
 .imm-checklist {
-  margin-top: var(--space-8);
+  margin-top: var(--space-4);
 }
 
 .imm-checklist__heading {
@@ -1324,7 +1327,7 @@
   letter-spacing: 0.2em;
   color: var(--color-olive);
   font-weight: 600;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-3);
 }
 
 .imm-checklist__list {
@@ -1336,27 +1339,27 @@
 .imm-checklist__item {
   counter-increment: imm-steps;
   display: flex;
-  gap: var(--space-4);
-  padding: var(--space-4) 0;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
   border-bottom: 1px solid var(--color-divider);
   font-family: var(--font-body);
   font-size: var(--text-sm);
   color: #3a3a3a;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .imm-checklist__item::before {
   content: counter(imm-steps);
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background: var(--color-dark);
   color: var(--color-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   margin-top: 2px;
 }
@@ -1496,8 +1499,8 @@
 
 @media (max-width: 768px) {
   .imm-columns { grid-template-columns: 1fr; }
-  .imm-status-row { grid-template-columns: 1fr; }
-  .imm-stat-row { grid-template-columns: 1fr; }
+  .imm-status-row { grid-template-columns: repeat(3, 1fr); }
+  .imm-stat-row { grid-template-columns: repeat(3, 1fr); }
   .imm-header__codes { display: none; }
   .imm-timeline__track { flex-wrap: wrap; gap: var(--space-4); }
   .imm-timeline__track::before { display: none; }
