@@ -2008,6 +2008,55 @@
 
 
   <!-- ============================================================
+       LOCAL & CHAT FLOATING BUTTONS (bottom-left)
+       ============================================================ -->
+  <div class="fab-group" id="fabGroup">
+    <button class="fab fab--local" id="fabLocal" aria-label="Local search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <span class="fab__label">Local</span>
+    <button class="fab fab--chat" id="fabChat" aria-label="Itinerary chat">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </button>
+    <span class="fab__label">Chat</span>
+  </div>
+
+  <!-- LOCAL PANEL -->
+  <div class="local-panel" id="localPanel">
+    <div class="local-panel__header">
+      <h3 class="local-panel__title">Local Search</h3>
+      <button class="local-panel__close" id="localClose" aria-label="Close">✕</button>
+    </div>
+    <p class="local-panel__desc">Find restaurants, pharmacies, ATMs, and attractions near your current location in Zürich.</p>
+    <div class="local-panel__buttons">
+      <a href="https://maps.google.com/maps/search/restaurants/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">🍽 Restaurants</a>
+      <a href="https://maps.google.com/maps/search/cafes/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">☕ Cafés</a>
+      <a href="https://maps.google.com/maps/search/pharmacy/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">💊 Pharmacy</a>
+      <a href="https://maps.google.com/maps/search/ATM/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">🏧 ATM</a>
+      <a href="https://maps.google.com/maps/search/supermarket/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">🛒 Supermarket</a>
+      <a href="https://maps.google.com/maps/search/attractions/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">📍 Attractions</a>
+      <a href="https://maps.google.com/maps/search/taxi/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">🚕 Taxi / Uber</a>
+      <a href="https://maps.google.com/maps/search/hospital/@47.3769,8.5417,15z" target="_blank" rel="noopener noreferrer" class="local-panel__btn">🏥 Hospital</a>
+    </div>
+  </div>
+
+  <!-- CHAT PANEL -->
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-panel__header">
+      <h3 class="chat-panel__title">Itinerary Chat</h3>
+      <button class="chat-panel__close" id="chatClose" aria-label="Close">✕</button>
+    </div>
+    <div class="chat-panel__messages" id="chatMessages">
+      <div class="chat-msg chat-msg--bot">Hi! I can help adjust your itinerary. Try asking:<br><br>• "What should I do if it rains Saturday?"<br>• "Where's the nearest good coffee?"<br>• "Adjust Sunday — start at 11 AM"<br>• "What's the best route to Kunsthaus?"</div>
+    </div>
+    <div class="chat-panel__input-row">
+      <input type="text" class="chat-panel__input" id="chatInput" placeholder="Ask about your trip…">
+      <button class="chat-panel__send" id="chatSend">Send</button>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
        LEAFLET JS (for map)
        ============================================================ -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -2476,6 +2525,90 @@
       window.addEventListener('scroll', handleSidebar, { passive: true });
       handleSidebar();
     }
+
+    /* -----------------------------------------------
+       LOCAL & CHAT PANELS
+       ----------------------------------------------- */
+    var fabLocal = document.getElementById('fabLocal');
+    var fabChat = document.getElementById('fabChat');
+    var localPanel = document.getElementById('localPanel');
+    var chatPanel = document.getElementById('chatPanel');
+    var localClose = document.getElementById('localClose');
+    var chatClose = document.getElementById('chatClose');
+    var chatInput = document.getElementById('chatInput');
+    var chatSend = document.getElementById('chatSend');
+    var chatMessages = document.getElementById('chatMessages');
+
+    function closeAllPanels() {
+      localPanel.classList.remove('active');
+      chatPanel.classList.remove('active');
+    }
+
+    fabLocal.addEventListener('click', function() {
+      var isOpen = localPanel.classList.contains('active');
+      closeAllPanels();
+      if (!isOpen) localPanel.classList.add('active');
+    });
+
+    fabChat.addEventListener('click', function() {
+      var isOpen = chatPanel.classList.contains('active');
+      closeAllPanels();
+      if (!isOpen) chatPanel.classList.add('active');
+    });
+
+    localClose.addEventListener('click', closeAllPanels);
+    chatClose.addEventListener('click', closeAllPanels);
+
+    /* Simple itinerary chat responder */
+    var chatResponses = {
+      rain: 'If it rains Saturday: Skip Uetliberg, head straight to the Landesmuseum (right next to HB, free with Zürich Card). Then Spr\u00fcngli for hot chocolate, Kunsthaus (all indoors), and keep Zeughauskeller dinner as planned.',
+      coffee: 'Nearest great coffee from the Marriott: walk 5 min south along the Limmat to Caf\u00e9 Miyuko (Limmatquai). Or take Tram 13 to Paradeplatz and visit Spr\u00fcngli — their hot chocolate is legendary.',
+      sunday: 'For a late Sunday start: Skip the lake promenade, go straight to Hiltl brunch (opens 9:30). After brunch, choose either Polybahn (quick) or Museum Rietberg (leisurely). Keep eCHo at 5:15 PM and Uber departure at 6:00 PM.',
+      kunsthaus: 'From the Marriott to Kunsthaus: Walk 5 min to Sihlquai/HB tram stop, take Tram 3 direction Klusplatz, exit at Kunsthaus (6 min ride). Or walk 20 min east through the Old Town — scenic but longer.',
+      dinner: 'Zeughauskeller is confirmed Saturday 7:30 PM. Try the Z\u00fcrcher Geschnetzeltes (veal in cream sauce) \u2014 its their signature. After dinner, Tram 13 back to Sihlquai/HB.',
+      hotel: 'Your hotel is the Zürich Marriott, Neum\u00fchlequai 42. Phone: +41 44 360 70 70. Home tram stop: Sihlquai/HB (6 min walk). White Elephant restaurant and Lenox Bar are both on-site.',
+      flight: 'Flight ZRH \u2192 CPH departs 8:25 PM Sunday (SK610, seats 3F/3D). Leave hotel by 6:00 PM. Uber to ZRH ~15 min. Arrive airport by 6:20 PM — 2 hours to spare.',
+      emergency: 'Emergency: 112 (any emergency), 144 (ambulance), 117 (police), 118 (fire). Nearest hospital: Universit\u00e4tsSpital Zürich, R\u00e4mistrasse 100 (Tram 9).',
+      default: 'I can help with: rain plans, restaurant recommendations, transit directions, Sunday schedule adjustments, hotel info, flight details, and emergency numbers. What would you like to know?'
+    };
+
+    function getChatResponse(msg) {
+      var lower = msg.toLowerCase();
+      if (lower.includes('rain') || lower.includes('weather') || lower.includes('cloudy')) return chatResponses.rain;
+      if (lower.includes('coffee') || lower.includes('cafe') || lower.includes('caf\u00e9')) return chatResponses.coffee;
+      if (lower.includes('sunday') || lower.includes('11') || lower.includes('late') || lower.includes('adjust')) return chatResponses.sunday;
+      if (lower.includes('kunsthaus') || lower.includes('museum') || lower.includes('art')) return chatResponses.kunsthaus;
+      if (lower.includes('dinner') || lower.includes('zeughaus') || lower.includes('restaurant')) return chatResponses.dinner;
+      if (lower.includes('hotel') || lower.includes('marriott')) return chatResponses.hotel;
+      if (lower.includes('flight') || lower.includes('airport') || lower.includes('depart')) return chatResponses.flight;
+      if (lower.includes('emergency') || lower.includes('hospital') || lower.includes('police')) return chatResponses.emergency;
+      return chatResponses.default;
+    }
+
+    function sendChat() {
+      var msg = chatInput.value.trim();
+      if (!msg) return;
+      /* Add user message */
+      var userDiv = document.createElement('div');
+      userDiv.className = 'chat-msg chat-msg--user';
+      userDiv.textContent = msg;
+      chatMessages.appendChild(userDiv);
+      chatInput.value = '';
+      /* Add bot response after short delay */
+      setTimeout(function() {
+        var botDiv = document.createElement('div');
+        botDiv.className = 'chat-msg chat-msg--bot';
+        botDiv.textContent = getChatResponse(msg);
+        chatMessages.appendChild(botDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 500);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    chatSend.addEventListener('click', sendChat);
+    chatInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') sendChat();
+    });
 
   })();
   </script>
