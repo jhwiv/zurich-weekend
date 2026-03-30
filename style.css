@@ -472,6 +472,7 @@
    SECTION LAYOUTS
    ============================================================ */
 .section {
+  scroll-margin-top: 140px;
   padding: clamp(var(--space-16), 8vw, var(--space-32)) var(--space-8);
 }
 
@@ -534,6 +535,7 @@
 
 /* Full-bleed image section divider */
 .image-divider {
+  scroll-margin-top: 140px;
   width: 100%;
   height: clamp(300px, 40vw, 550px);
   overflow: hidden;
@@ -2520,4 +2522,11 @@
   font-size: var(--text-xl);
   letter-spacing: 0.2em;
   margin-bottom: var(--space-6);
+}
+
+/* Mobile scroll-margin for sections with taller sticky nav */
+@media (max-width: 768px) {
+  .section, .image-divider, [id] {
+    scroll-margin-top: 220px;
+  }
 }

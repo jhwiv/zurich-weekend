@@ -915,7 +915,7 @@
       <p class="flags reveal">🇪🇺 🇨🇭 🇩🇰</p>
 
       <!-- ====== PRE-TRIP PLANNING: Schengen Entry Requirements — INFOGRAPHIC ====== -->
-      <div class="immigration-infographic reveal">
+      <div class="immigration-infographic">
 
         <!-- Gradient Header Banner -->
         <div class="imm-header">
@@ -2145,8 +2145,8 @@
           }
         });
       }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.05,
+        rootMargin: '100px 0px 0px 0px'
       });
 
       reveals.forEach(function (el) {
@@ -2157,6 +2157,44 @@
         el.classList.add('visible');
       });
     }
+
+    /* Force reveals visible when navigating via hash links */
+    function revealHashTarget() {
+      var hash = window.location.hash;
+      if (!hash) return;
+      var target = document.querySelector(hash);
+      if (!target) return;
+      /* Reveal all .reveal elements within the target section and nearby */
+      var section = target.closest('section') || target;
+      section.querySelectorAll('.reveal').forEach(function(el) {
+        el.classList.add('visible');
+      });
+      /* Also reveal the next sibling section's elements */
+      var next = section.nextElementSibling;
+      if (next) {
+        next.querySelectorAll('.reveal').forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+    }
+    window.addEventListener('hashchange', revealHashTarget);
+    revealHashTarget();
+
+    /* Also force reveals on any internal link click */
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        setTimeout(revealHashTarget, 100);
+        setTimeout(function() {
+          /* Also trigger observer manually for anything still hidden */
+          document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
+            var rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight + 200 && rect.bottom > -200) {
+              el.classList.add('visible');
+            }
+          });
+        }, 300);
+      });
+    });
 
     /* -----------------------------------------------
        DAY NAV PILL ACTIVE STATE
