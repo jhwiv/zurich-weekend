@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zürich Weekend — A Curated Journey</title>
+  <meta name="description" content="A luxury father–daughter trip from Copenhagen to Zürich. Mountain, art, old town & great food — 26–29 March 2026.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zürich Weekend — A Curated Journey">
+  <meta property="og:description" content="Copenhagen → Zürich. Mountain, art, old town & great food. 26–29 March 2026.">
+  <meta property="og:image" content="./assets/hero-zurich.png">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24' font-family='serif'>Z</text></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav__logo">Zürich Weekend</a>
+    <ul class="nav__links" role="list">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#copenhagen">Copenhagen</a></li>
+      <li><a href="#friday">Friday</a></li>
+      <li><a href="#saturday">Saturday</a></li>
+      <li><a href="#sunday">Sunday</a></li>
+      <li><a href="#essentials">Essentials</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Close navigation menu">&times;</button>
+    <a href="#overview">Overview</a>
+    <a href="#copenhagen">Copenhagen</a>
+    <a href="#friday">Friday</a>
+    <a href="#saturday">Saturday</a>
+    <a href="#sunday">Sunday</a>
+    <a href="#essentials">Essentials</a>
+  </div>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <header class="hero" id="hero">
+    <div class="hero__image">
+      <img src="./assets/hero-zurich.png" alt="Panoramic view of Zürich old town and lake with the Alps in the background" loading="eager" fetchpriority="high">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">A Curated Journey · Copenhagen → Zürich</p>
+      <h1 class="hero__title">Zürich</h1>
+      <p class="hero__subtitle">Mountain, art, old town &amp; great food</p>
+      <p class="hero__meta">26 – 29 March 2026</p>
+      <div class="hero__buttons">
+        <a href="#overview" class="btn">Explore the Itinerary</a>
+        <a href="#essentials" class="btn btn--filled">View Essentials</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M8 3v10M4 9l4 4 4-4"/>
+      </svg>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       OVERVIEW
+       ============================================================ -->
+  <section class="section section--sand" id="overview">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">The Journey</p>
+      <h2 class="section__title reveal">Copenhagen → Zürich</h2>
+      <p class="section__subtitle reveal">Father–daughter trip — visiting Charlotte while she's studying in Copenhagen, then on to a Zürich weekend.</p>
+
+      <div class="weather-strip reveal">
+        <div class="weather-card">
+          <p class="weather-card__day">Fri 27 Mar</p>
+          <p class="weather-card__temp">47° / 37°F</p>
+          <p class="weather-card__desc">Partly cloudy</p>
+        </div>
+        <div class="weather-card">
+          <p class="weather-card__day">Sat 28 Mar</p>
+          <p class="weather-card__temp">49° / 36°F</p>
+          <p class="weather-card__desc">Mostly cloudy</p>
+        </div>
+        <div class="weather-card">
+          <p class="weather-card__day">Sun 29 Mar</p>
+          <p class="weather-card__temp">48° / 35°F</p>
+          <p class="weather-card__desc">Partly cloudy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DAY NAVIGATION (sticky pills)
+       ============================================================ -->
+  <nav class="day-nav" id="dayNav" aria-label="Day navigation">
+    <a href="#overview" class="day-nav__pill active" data-section="overview">Overview</a>
+    <a href="#copenhagen" class="day-nav__pill" data-section="copenhagen">Copenhagen</a>
+    <a href="#friday" class="day-nav__pill" data-section="friday">Friday</a>
+    <a href="#saturday" class="day-nav__pill" data-section="saturday">Saturday</a>
+    <a href="#sunday" class="day-nav__pill" data-section="sunday">Sunday</a>
+    <a href="#essentials" class="day-nav__pill" data-section="essentials">Essentials</a>
+  </nav>
+
+
+  <!-- ============================================================
+       COPENHAGEN
+       ============================================================ -->
+  <div class="image-divider" id="copenhagen">
+    <img src="./assets/copenhagen-nyhavn.png" alt="Colourful townhouses lining Nyhavn canal in Copenhagen" loading="lazy">
+    <div class="image-divider__overlay">
+      <h2 class="image-divider__title">Copenhagen</h2>
+      <p class="image-divider__sub">Stopover · Wed 25 – Fri 27 March</p>
+    </div>
+  </div>
+
+  <section class="section section--sand">
+    <div class="section__inner">
+      <div class="timeline">
+
+        <!-- Wed Night -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">Wed Night</div>
+          <div class="timeline__body">
+            <h3>Departure → Copenhagen</h3>
+            <p>Overnight flight — arrive Thursday morning at 7:00 AM.</p>
+            <div class="timeline__tags">
+              <span class="tag">Overnight</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7:00 AM Arrive -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">7:00 AM</div>
+          <div class="timeline__body">
+            <h3>Arrive CPH → Scandic Nørreport</h3>
+            <p>M2 Metro from the airport, 13 minutes. Hotel is directly across from Nørreport station.</p>
+            <div class="timeline__tags">
+              <span class="tag">M2 Metro</span>
+              <span class="tag">13 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel Card -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">Hotel</div>
+          <div class="timeline__body">
+            <h3><a href="https://www.scandichotels.com/hotels/denmark/copenhagen/scandic-norreport" target="_blank" rel="noopener noreferrer">Scandic Nørreport</a></h3>
+            <p>4-star hotel in the heart of Copenhagen. Rooftop bar Level Six with city views. Breakfast included, plus complimentary happy hour 4–5 PM daily.</p>
+            <div class="timeline__tags">
+              <span class="tag">4-Star</span>
+              <span class="tag">Breakfast Included</span>
+              <span class="tag">Happy Hour 4–5 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charlotte -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">Charlotte</div>
+          <div class="timeline__body">
+            <h3>Charlotte's Place</h3>
+            <p><a href="https://maps.google.com/?q=Holmbladsgade+70B,+Amager,+Copenhagen" target="_blank" rel="noopener noreferrer">Holmbladsgade 70B, Amager</a> — take the M2 to Amagerbro, 15 minutes from Nørreport.</p>
+            <div class="timeline__tags">
+              <span class="tag">M2 → Amagerbro</span>
+              <span class="tag">15 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thu Dinner -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">Thu 6:15 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=The+Union+Kitchen+Vodroffsvej+39+Copenhagen" target="_blank" rel="noopener noreferrer">The Union Kitchen</a></h3>
+            <p>Dinner for four — James, Charlotte, Olivia &amp; Temple. Vodroffsvej 39, Frederiksberg.</p>
+            <div class="timeline__tags">
+              <span class="tag tag--confirmed">Confirmed · 4 Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fri Flight -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">Fri Evening</div>
+          <div class="timeline__body">
+            <h3>Copenhagen → Zürich</h3>
+            <p>Evening flight to Zürich. Say goodbye to Copenhagen.</p>
+            <div class="timeline__tags">
+              <span class="tag">Flight</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FRIDAY
+       ============================================================ -->
+  <div class="image-divider" id="friday">
+    <img src="./assets/friday-arrival.png" alt="Evening view of Zürich city lights reflecting on the Limmat river" loading="lazy">
+    <div class="image-divider__overlay">
+      <h2 class="image-divider__title">Friday</h2>
+      <p class="image-divider__sub">Day 1 · 27 March · Arrival &amp; White Elephant</p>
+    </div>
+  </div>
+
+  <section class="section section--sand">
+    <div class="section__inner">
+      <div class="timeline">
+
+        <!-- Airport Transfer -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">7:40 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Zurich+Marriott+Hotel+Neumühlequai+42" target="_blank" rel="noopener noreferrer">Airport → Zürich Marriott Hotel</a></h3>
+            <p>Airport Express train to Zürich HB, then Tram 13 to Sihlquai/HB. Total journey 30–40 minutes.</p>
+            <div class="timeline__tags">
+              <span class="tag">Airport Express</span>
+              <span class="tag">Tram 13</span>
+              <span class="tag">30–40 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- White Elephant -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">9:00 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=White+Elephant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">White Elephant</a></h3>
+            <p>Michelin-listed Thai restaurant, a Zürich institution since 1991. Located in the hotel — no commute needed. Excellent vegetarian options available.</p>
+            <div class="timeline__tags">
+              <span class="tag">Michelin-Listed</span>
+              <span class="tag">Thai</span>
+              <span class="tag">Vegetarian-Friendly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lenox Bar -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">10:30 PM</div>
+          <div class="timeline__body">
+            <h3>Optional — Lenox Bar</h3>
+            <p>Rare whiskies and craft cocktails. A stylish nightcap without leaving the hotel.</p>
+            <div class="timeline__tags">
+              <span class="tag">Optional</span>
+              <span class="tag">Hotel Bar</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SATURDAY
+       ============================================================ -->
+  <div class="image-divider" id="saturday">
+    <img src="./assets/saturday-mountain.png" alt="Panoramic alpine view from Uetliberg summit overlooking Zürich and the lake" loading="lazy">
+    <div class="image-divider__overlay">
+      <h2 class="image-divider__title">Saturday</h2>
+      <p class="image-divider__sub">Day 2 · 28 March · Mountain, Art &amp; Old Town</p>
+    </div>
+  </div>
+
+  <section class="section section--sand">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">The Big Day</p>
+      <p class="section__subtitle reveal" style="margin-bottom: var(--space-12);">No hotel return before dinner — pack everything you'll need for the full day.</p>
+
+      <div class="timeline">
+
+        <!-- Uetliberg -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">10:00 AM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Uetliberg+Zurich" target="_blank" rel="noopener noreferrer">Uetliberg Summit — 871 m</a></h3>
+            <p>S10 train from Zürich HB, 20 minutes to the top. Panoramic views of the city, lake, and Alps. Covered by Zürich Card.</p>
+            <div class="timeline__tags">
+              <span class="tag">S10 from HB</span>
+              <span class="tag">20 min</span>
+              <span class="tag">Zürich Card</span>
+            </div>
+
+            <!-- Rain Alternatives -->
+            <div class="alt-card">
+              <p class="alt-card__label">☁ Cloudy Alternative</p>
+              <p><strong>Polybahn + ETH Terrace</strong> — historic funicular to ETH Zürich's terrace for sweeping city views, rain or shine.</p>
+            </div>
+            <div class="alt-card">
+              <p class="alt-card__label">🌧 Full Rain Alternative</p>
+              <p><strong><a href="https://maps.google.com/?q=Landesmuseum+Zurich" target="_blank" rel="noopener noreferrer">Landesmuseum</a></strong> — Swiss National Museum, right next to Zürich HB. World-class cultural history under one roof.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sprüngli -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">12:45 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Confiserie+Sprüngli+Bahnhofstrasse+Zurich" target="_blank" rel="noopener noreferrer">Café Sprüngli</a></h3>
+            <p>Legendary confiserie since 1836. Home of the Luxemburgerli — delicate bite-size macarons in every flavour. A Zürich ritual.</p>
+            <div class="timeline__tags">
+              <span class="tag">Since 1836</span>
+              <span class="tag">Luxemburgerli</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kunsthaus -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">1:30 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Kunsthaus+Zurich" target="_blank" rel="noopener noreferrer">Kunsthaus Zürich</a></h3>
+            <p>Switzerland's largest art museum — free with Zürich Card. The Bührle Collection of Impressionists, Munch, Giacometti, and the stunning Chipperfield extension.</p>
+            <div class="timeline__tags">
+              <span class="tag">Free w/ Zürich Card</span>
+              <span class="tag">Bührle Collection</span>
+              <span class="tag">Munch · Giacometti</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kunsthaus Café Lunch -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">3:00 PM</div>
+          <div class="timeline__body">
+            <h3>Lunch at Kunsthaus Café</h3>
+            <p>Late lunch inside the museum. Light seasonal dishes in the bright Chipperfield wing café.</p>
+            <div class="timeline__tags">
+              <span class="tag">Casual</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Old Town -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">4:15 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Augustinergasse+Zurich" target="_blank" rel="noopener noreferrer">Old Town Walk</a></h3>
+            <p>Stroll through the medieval heart of Zürich: Augustinergasse's painted bay windows, up to Grossmünster's twin towers, across to Fraumünster for the Chagall stained-glass windows, and into the elegant Münsterhof square.</p>
+            <div class="timeline__tags">
+              <span class="tag">Augustinergasse</span>
+              <span class="tag">Grossmünster</span>
+              <span class="tag">Chagall Glass</span>
+              <span class="tag">Münsterhof</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lindenhof -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">5:45 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Lindenhof+Zurich" target="_blank" rel="noopener noreferrer">Lindenhof Hill</a></h3>
+            <p>Panoramic views from the city's ancient Roman fort hilltop. Linden trees, chess players, and the best vantage point in the old town.</p>
+            <div class="timeline__tags">
+              <span class="tag">Panoramic Views</span>
+              <span class="tag">Roman Fort</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pre-dinner -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">6:30 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Café+Bar+Münsterhof+Zurich" target="_blank" rel="noopener noreferrer">Café Bar Münsterhof</a></h3>
+            <p>Pre-dinner drinks overlooking Münsterhof square. Aperol spritzes or local wine as the city lights come on.</p>
+            <div class="timeline__tags">
+              <span class="tag">Drinks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zeughauskeller -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">7:30 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Zeughauskeller+Bahnhofstrasse+28A+Zurich" target="_blank" rel="noopener noreferrer">Zeughauskeller</a></h3>
+            <p>Dinner in a 15th-century armory on Bahnhofstrasse 28A. Vaulted ceilings, long communal tables, and classic Swiss cuisine. A Zürich institution.</p>
+            <div class="timeline__tags">
+              <span class="tag tag--confirmed">Confirmed · 7:30 PM</span>
+              <span class="tag">15th-Century Armory</span>
+              <span class="tag">Swiss Cuisine</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SUNDAY
+       ============================================================ -->
+  <div class="image-divider" id="sunday">
+    <img src="./assets/sunday-lake.png" alt="Lake Zürich promenade with swans, sailboats, and the Alps on the horizon" loading="lazy">
+    <div class="image-divider__overlay">
+      <h2 class="image-divider__title">Sunday</h2>
+      <p class="image-divider__sub">Day 3 · 29 March · Palm Sunday · Slow Morning</p>
+    </div>
+  </div>
+
+  <section class="section section--sand">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">Departure Day</p>
+      <p class="section__subtitle reveal" style="margin-bottom: var(--space-12);">Leave hotel by 6:00 PM sharp.</p>
+
+      <div class="timeline">
+
+        <!-- Hiltl Brunch -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">10:00 AM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Haus+Hiltl+Zurich" target="_blank" rel="noopener noreferrer">Hiltl Brunch</a></h3>
+            <p>World's oldest vegetarian restaurant, est. 1898. Sunday brunch buffet with over 100 dishes — Indian, Mediterranean, Asian, Swiss. A Zürich classic.</p>
+            <div class="timeline__tags">
+              <span class="tag">Since 1898</span>
+              <span class="tag">100+ Dish Buffet</span>
+              <span class="tag">Vegetarian</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lake Promenade -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">11:15 AM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Quaianlagen+Zurich" target="_blank" rel="noopener noreferrer">Lake Zürich Promenade</a></h3>
+            <p>Walk along the Quaianlagen — swans, sailboats, and the Alps in the distance. One of Europe's loveliest lakefront walks.</p>
+            <div class="timeline__tags">
+              <span class="tag">Quaianlagen</span>
+              <span class="tag">Alps Views</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional Boat / Polybahn -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">11:45 AM</div>
+          <div class="timeline__body">
+            <h3>Optional — Boat Cruise or Polybahn</h3>
+            <p>Short boat cruise on Lake Zürich (~40 min, covered by Zürich Card) <em>or</em> ride the Polybahn funicular for elevated city views.</p>
+            <div class="timeline__tags">
+              <span class="tag">Optional</span>
+              <span class="tag">Zürich Card</span>
+              <span class="tag">~40 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fischerstube -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">1:00 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Fischerstube+Zürihorn+Zurich" target="_blank" rel="noopener noreferrer">Fischerstube Zürihorn</a></h3>
+            <p>Lunch at a lakeside terrace overlooking the water. Fresh Swiss fish and local specialties with a view.</p>
+            <div class="timeline__tags">
+              <span class="tag">Lakeside Terrace</span>
+              <span class="tag">Swiss Fish</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Museum Rietberg -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">2:30 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=Museum+Rietberg+Zurich" target="_blank" rel="noopener noreferrer">Museum Rietberg</a></h3>
+            <p>Asian, African, and Oceanic art in the beautiful Rieter Park. Free with Zürich Card. A contemplative way to spend the afternoon.</p>
+            <div class="timeline__tags">
+              <span class="tag">Free w/ Zürich Card</span>
+              <span class="tag">Rieter Park</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Farewell Dinner -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">5:15 PM</div>
+          <div class="timeline__body">
+            <h3><a href="https://maps.google.com/?q=eCHo+restaurant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">Farewell Dinner — eCHo</a></h3>
+            <p>Hotel's Swiss restaurant. Try the Züri Gschnätzlets — Zürich's signature veal in cream sauce. A proper farewell to the city.</p>
+            <div class="timeline__tags">
+              <span class="tag">Hotel Restaurant</span>
+              <span class="tag">Züri Gschnätzlets</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depart -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">6:00 PM</div>
+          <div class="timeline__body">
+            <h3>Depart</h3>
+            <p>Walk to Zürich HB (3 min), Airport Express train (25 min). Flight at 8:25 PM. Allow extra time for check-in and security.</p>
+            <div class="timeline__tags">
+              <span class="tag">Flight 8:25 PM</span>
+              <span class="tag">Airport Express</span>
+              <span class="tag">25 min</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ESSENTIALS
+       ============================================================ -->
+  <section class="section section--cream" id="essentials">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">Quick Reference</p>
+      <h2 class="section__title reveal">Trip Essentials</h2>
+
+      <!-- Essentials Grid -->
+      <div class="essentials-grid" style="margin-top: var(--space-10);">
+
+        <div class="essential-card reveal">
+          <p class="essential-card__label">Hotel</p>
+          <p class="essential-card__value">Zürich Marriott Hotel</p>
+          <p class="essential-card__detail">
+            <a href="https://maps.google.com/?q=Neumühlequai+42+Zurich" target="_blank" rel="noopener noreferrer">Neumühlequai 42, 8006 Zürich</a><br>
+            <a href="tel:+41443607070">+41 44 360 70 70</a>
+          </p>
+        </div>
+
+        <div class="essential-card reveal reveal-delay-1">
+          <p class="essential-card__label">Zürich Card</p>
+          <p class="essential-card__value">72-Hour Pass</p>
+          <p class="essential-card__detail">All trams, buses, boats, S-Bahn, Uetliberg + 40&nbsp;museums free. Activate in the ZVV app at the airport on arrival.</p>
+        </div>
+
+        <div class="essential-card reveal reveal-delay-2">
+          <p class="essential-card__label">Home Stop</p>
+          <p class="essential-card__value">Sihlquai / HB</p>
+          <p class="essential-card__detail">Tram stop 3 minutes' walk from the hotel. Trams&nbsp;4, 11, 13, 17 all stop here.</p>
+        </div>
+
+        <div class="essential-card reveal">
+          <p class="essential-card__label">Saturday Dinner</p>
+          <p class="essential-card__value">Zeughauskeller</p>
+          <p class="essential-card__detail">Confirmed, 7:30 PM · <a href="https://maps.google.com/?q=Zeughauskeller+Bahnhofstrasse+28A+Zurich" target="_blank" rel="noopener noreferrer">Bahnhofstrasse 28A</a></p>
+        </div>
+
+        <div class="essential-card reveal reveal-delay-1">
+          <p class="essential-card__label">Emergency</p>
+          <p class="essential-card__value">112</p>
+          <p class="essential-card__detail">
+            <strong>112</strong> — Any emergency<br>
+            <strong>144</strong> — Ambulance<br>
+            <strong>117</strong> — Police
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Dining Table -->
+      <div style="margin-top: var(--space-16);">
+        <h3 class="section__eyebrow reveal" style="margin-bottom: var(--space-6);">Dining &amp; Reservations</h3>
+        <div style="overflow-x: auto;">
+          <table class="dining-table reveal">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Venue</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Thu 26</td>
+                <td>6:15 PM</td>
+                <td><a href="https://maps.google.com/?q=The+Union+Kitchen+Vodroffsvej+39+Copenhagen" target="_blank" rel="noopener noreferrer">The Union Kitchen, Copenhagen</a></td>
+                <td><span class="status-confirmed">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>Fri 27</td>
+                <td>9:00 PM</td>
+                <td><a href="https://maps.google.com/?q=White+Elephant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">White Elephant</a></td>
+                <td><span class="status-walkin">Walk-in</span></td>
+              </tr>
+              <tr>
+                <td>Sat 28</td>
+                <td>12:45 PM</td>
+                <td><a href="https://maps.google.com/?q=Confiserie+Sprüngli+Bahnhofstrasse+Zurich" target="_blank" rel="noopener noreferrer">Café Sprüngli</a></td>
+                <td><span class="status-walkin">Walk-in</span></td>
+              </tr>
+              <tr>
+                <td>Sat 28</td>
+                <td>3:00 PM</td>
+                <td>Kunsthaus Café</td>
+                <td><span class="status-walkin">Walk-in</span></td>
+              </tr>
+              <tr>
+                <td>Sat 28</td>
+                <td>7:30 PM</td>
+                <td><a href="https://maps.google.com/?q=Zeughauskeller+Bahnhofstrasse+28A+Zurich" target="_blank" rel="noopener noreferrer">Zeughauskeller</a></td>
+                <td><span class="status-confirmed">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>Sun 29</td>
+                <td>10:00 AM</td>
+                <td><a href="https://maps.google.com/?q=Haus+Hiltl+Zurich" target="_blank" rel="noopener noreferrer">Hiltl Brunch</a></td>
+                <td><span class="status-walkin">Walk-in</span></td>
+              </tr>
+              <tr>
+                <td>Sun 29</td>
+                <td>1:00 PM</td>
+                <td><a href="https://maps.google.com/?q=Fischerstube+Zürihorn+Zurich" target="_blank" rel="noopener noreferrer">Fischerstube Zürihorn</a></td>
+                <td><span class="status-walkin">Walk-in</span></td>
+              </tr>
+              <tr>
+                <td>Sun 29</td>
+                <td>5:15 PM</td>
+                <td><a href="https://maps.google.com/?q=eCHo+restaurant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">eCHo (Hotel)</a></td>
+                <td><span class="status-walkin">Walk-in</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Transport Reference -->
+      <div style="margin-top: var(--space-16);">
+        <h3 class="section__eyebrow reveal" style="margin-bottom: var(--space-6);">Transport Reference</h3>
+        <div class="transport-grid reveal">
+          <div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Airport → Hotel</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Airport Express + Tram 13 · 30–40 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Hotel → Uetliberg</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">S10 from HB · 20 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Hotel → Kunsthaus</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Tram 3 → Kunsthaus · 10 min</span>
+            </div>
+          </div>
+          <div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Hotel → Old Town</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Walk · 12 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Hotel → Hiltl</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Walk · 10 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Hotel → Airport</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Walk to HB + Express · 28 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency Bar -->
+      <div class="emergency-bar reveal" style="margin-top: var(--space-16);">
+        <div class="emergency-item">
+          <p class="emergency-item__number">112</p>
+          <p class="emergency-item__label">Any Emergency</p>
+        </div>
+        <div class="emergency-item">
+          <p class="emergency-item__number">144</p>
+          <p class="emergency-item__label">Ambulance</p>
+        </div>
+        <div class="emergency-item">
+          <p class="emergency-item__number">117</p>
+          <p class="emergency-item__label">Police</p>
+        </div>
+      </div>
+
+      <!-- Survival Guide -->
+      <div style="margin-top: var(--space-16);">
+        <h3 class="section__eyebrow reveal" style="margin-bottom: var(--space-6);">Survival Guide</h3>
+
+        <div class="accordion reveal">
+
+          <!-- Zürich Card & Transport -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Zürich Card &amp; Transport
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>Zürich Card 72 hr</strong> covers all trams, buses, S-Bahn, boats on Lake Zürich, the Uetliberg railway, and over 40 museums — including Kunsthaus and Museum Rietberg.</p>
+                <p><strong>Activate</strong> your card in the ZVV app the moment you land at the airport. It starts counting from activation, not purchase.</p>
+                <p><strong>Home tram stop:</strong> Sihlquai/HB — 3 minutes from the hotel. Trams 4, 11, 13, and 17 all stop here.</p>
+                <p><strong>Zürich HB</strong> (main station) is a 5-minute walk. Airport Express departs every 10 minutes, takes 12 minutes to the airport.</p>
+                <p><strong>Tipping on transport:</strong> Not expected. Swiss public transport runs like clockwork.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopping & Palm Sunday -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Shopping &amp; Palm Sunday
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>Palm Sunday (29 March):</strong> Most shops will be closed. Restaurants, museums, and public transport run normally.</p>
+                <p><strong>Saturday shopping:</strong> Bahnhofstrasse shops are open until 6 PM on Saturday. Sprüngli, Globus, and Grieder are all on the main strip.</p>
+                <p><strong>Souvenirs worth buying:</strong> Luxemburgerli from Sprüngli, Swiss chocolate from Läderach, a Victorinox knife from the HB shop.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apps to Download -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Apps to Download
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>ZVV App</strong> — Zürich Card activation and live tram/train schedules.</p>
+                <p><strong>SBB Mobile</strong> — Swiss Federal Railways. Real-time departures, platform info, connections.</p>
+                <p><strong>Google Maps</strong> — Offline maps of Zürich downloaded before departure.</p>
+                <p><strong>Rejseplanen</strong> — Copenhagen public transport (for the stopover).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Money & Cards -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Money &amp; Cards
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>Currency:</strong> Swiss Franc (CHF). Denmark uses Danish Krone (DKK). Neither is the Euro.</p>
+                <p><strong>Cards accepted everywhere.</strong> Visa and Mastercard work in virtually every shop and restaurant. Apple Pay and contactless widely accepted.</p>
+                <p><strong>Tipping:</strong> Not required in Switzerland — service is included. Round up or leave 5–10% for exceptional service if you wish.</p>
+                <p><strong>ATMs:</strong> Available at the airport and throughout the city. Avoid currency conversion at the ATM — always choose to be charged in CHF.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phones & Connectivity -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Phones &amp; Connectivity
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>Wi-Fi:</strong> Available at both hotels and most cafés/restaurants.</p>
+                <p><strong>Roaming:</strong> Check your carrier's international plan. Switzerland is NOT part of the EU, so EU roaming packages may not apply.</p>
+                <p><strong>Denmark:</strong> EU roaming should work with most US carriers' international plans. Verify before departure.</p>
+                <p><strong>Emergency:</strong> 112 works from any phone, even without a SIM card.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Good to Know -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Good to Know
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>Daylight Saving:</strong> Clocks spring forward on Sunday 29 March at 2:00 AM. You lose one hour — double-check your alarm for the flight.</p>
+                <p><strong>Water:</strong> Zürich's tap water is excellent — better than bottled. Over 1,200 public fountains serve drinkable water throughout the city.</p>
+                <p><strong>Language:</strong> Swiss German is the local dialect, but English is widely spoken, especially in hospitality.</p>
+                <p><strong>Dress code:</strong> Smart casual for all restaurants on this trip. No need for formal attire, but Zürich appreciates looking put-together.</p>
+                <p><strong>Altitude:</strong> Uetliberg is only 871 m — no altitude concerns. Wear sturdy shoes for the summit walk.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <p class="footer__col-title">The Journey</p>
+        <a href="#overview" style="display:block;">Overview</a>
+        <a href="#copenhagen" style="display:block;">Copenhagen Stopover</a>
+        <a href="#essentials" style="display:block;">Trip Essentials</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Days</p>
+        <a href="#friday" style="display:block;">Friday — Arrival</a>
+        <a href="#saturday" style="display:block;">Saturday — The Big Day</a>
+        <a href="#sunday" style="display:block;">Sunday — Palm Sunday</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Essentials</p>
+        <a href="#essentials" style="display:block;">Hotel &amp; Contacts</a>
+        <a href="#essentials" style="display:block;">Zürich Card</a>
+        <a href="#essentials" style="display:block;">Survival Guide</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="#" class="footer__brand">Zürich Weekend</a>
+      <p>Powered by Alterra Digital · V5.0</p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       FLIGHT BANNER (fixed bottom)
+       ============================================================ -->
+  <div class="flight-banner" id="flightBanner" role="alert">
+    <span class="flight-banner__text">Flight ZRH 8:25 PM · Leave Hotel 6:00 PM Sharp</span>
+    <button class="flight-banner__dismiss" id="dismissBanner" aria-label="Dismiss flight reminder">&times;</button>
+  </div>
+
+
+  <!-- ============================================================
+       BACK TO TOP
+       ============================================================ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 15V3M4 7l5-5 5 5"/>
+    </svg>
+  </button>
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* -----------------------------------------------
+       ELEMENTS
+       ----------------------------------------------- */
+    const nav         = document.getElementById('nav');
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const dayNav      = document.getElementById('dayNav');
+    const pills       = dayNav.querySelectorAll('.day-nav__pill');
+    const backToTop   = document.getElementById('backToTop');
+    const flightBanner= document.getElementById('flightBanner');
+    const dismissBtn  = document.getElementById('dismissBanner');
+    const reveals     = document.querySelectorAll('.reveal');
+    const accordions  = document.querySelectorAll('.accordion__header');
+
+    /* -----------------------------------------------
+       NAV SCROLL BEHAVIOR (transparent → sand)
+       ----------------------------------------------- */
+    let lastScroll = 0;
+
+    function handleNavScroll() {
+      const y = window.scrollY;
+      if (y > 80) {
+        nav.classList.add('nav--scrolled');
+      } else {
+        nav.classList.remove('nav--scrolled');
+      }
+      lastScroll = y;
+    }
+
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll();
+
+    /* -----------------------------------------------
+       MOBILE MENU
+       ----------------------------------------------- */
+    function openMobileMenu() {
+      mobileMenu.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', openMobileMenu);
+    mobileClose.addEventListener('click', closeMobileMenu);
+
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+
+    /* -----------------------------------------------
+       SCROLL REVEAL (IntersectionObserver)
+       ----------------------------------------------- */
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      reveals.forEach(function (el) {
+        revealObserver.observe(el);
+      });
+    } else {
+      // Fallback: show everything
+      reveals.forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
+
+    /* -----------------------------------------------
+       DAY NAV PILL ACTIVE STATE
+       ----------------------------------------------- */
+    const sectionIds = ['overview', 'copenhagen', 'friday', 'saturday', 'sunday', 'essentials'];
+    const sectionEls = sectionIds.map(function (id) {
+      return document.getElementById(id);
+    }).filter(Boolean);
+
+    function updateActivePill() {
+      const scrollY = window.scrollY + 180; // offset for fixed nav + day nav
+      let activeId = sectionIds[0];
+
+      sectionEls.forEach(function (section) {
+        if (section.offsetTop <= scrollY) {
+          activeId = section.id;
+        }
+      });
+
+      pills.forEach(function (pill) {
+        if (pill.dataset.section === activeId) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActivePill, { passive: true });
+    updateActivePill();
+
+    /* -----------------------------------------------
+       ACCORDION TOGGLE
+       ----------------------------------------------- */
+    accordions.forEach(function (header) {
+      header.addEventListener('click', function () {
+        const item = header.parentElement;
+        const content = header.nextElementSibling;
+        const isOpen = item.classList.contains('active');
+
+        // Close all others
+        document.querySelectorAll('.accordion__item.active').forEach(function (openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('active');
+            openItem.querySelector('.accordion__content').style.maxHeight = null;
+            openItem.querySelector('.accordion__header').setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('active');
+          content.style.maxHeight = null;
+          header.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('active');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          header.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* -----------------------------------------------
+       BACK TO TOP
+       ----------------------------------------------- */
+    function handleBackToTop() {
+      if (window.scrollY > 600) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', handleBackToTop, { passive: true });
+    handleBackToTop();
+
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* -----------------------------------------------
+       FLIGHT BANNER (show after scroll, dismissible)
+       ----------------------------------------------- */
+    let bannerDismissed = false;
+
+    function handleFlightBanner() {
+      if (bannerDismissed) return;
+      if (window.scrollY > 800) {
+        flightBanner.classList.add('visible');
+      } else {
+        flightBanner.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', handleFlightBanner, { passive: true });
+
+    dismissBtn.addEventListener('click', function () {
+      bannerDismissed = true;
+      flightBanner.classList.remove('visible');
+    });
+
+    /* -----------------------------------------------
+       DATE-AWARE ROUTING
+       Auto-scroll to the relevant day section on load
+       ----------------------------------------------- */
+    function dateAwareRouting() {
+      // Don't override if user navigated with a hash
+      if (window.location.hash) return;
+
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth(); // 0-indexed: March = 2
+      const day = now.getDate();
+
+      // Only activate for March 25-29, 2026
+      if (year !== 2026 || month !== 2) return;
+
+      let targetId = null;
+
+      if (day >= 25 && day <= 26) {
+        targetId = 'copenhagen';
+      } else if (day === 27) {
+        targetId = 'friday';
+      } else if (day === 28) {
+        targetId = 'saturday';
+      } else if (day === 29) {
+        targetId = 'sunday';
+      }
+
+      if (targetId) {
+        // Small delay to let the page render
+        setTimeout(function () {
+          const target = document.getElementById(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 600);
+      }
+    }
+
+    // Run after DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', dateAwareRouting);
+    } else {
+      dateAwareRouting();
+    }
+
+  })();
+  </script>
+
+</body>
+</html>
