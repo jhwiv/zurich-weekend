@@ -68,6 +68,65 @@
 }
 
 /* ============================================================
+   FLOATING FLIGHT PILL (top of page)
+   ============================================================ */
+.flight-pill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: var(--space-2) var(--space-8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  transform: translateY(-100%);
+  transition: transform 400ms var(--ease-out);
+}
+
+.flight-pill.visible {
+  transform: translateY(0);
+}
+
+.flight-pill__text {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flight-pill__text--compact {
+  display: none;
+}
+
+.flight-pill__dismiss {
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 180ms var(--ease-out);
+  flex-shrink: 0;
+}
+
+.flight-pill__dismiss:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 640px) {
+  .flight-pill__text--full { display: none; }
+  .flight-pill__text--compact { display: inline; }
+  .flight-pill { padding: var(--space-2) var(--space-4); }
+}
+
+/* ============================================================
    NAVIGATION
    ============================================================ */
 .nav {
@@ -82,7 +141,12 @@
   justify-content: space-between;
   transition: background 400ms var(--ease-out),
               box-shadow 400ms var(--ease-out),
-              padding 300ms var(--ease-out);
+              padding 300ms var(--ease-out),
+              top 300ms var(--ease-out);
+}
+
+.nav--pill-visible {
+  top: 36px;
 }
 
 .nav--scrolled {
@@ -119,12 +183,15 @@
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 300ms var(--ease-out);
+  flex-shrink: 0;
 }
 
 .nav__links {
   display: flex;
-  gap: var(--space-8);
+  gap: var(--space-6);
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav__links a {
@@ -133,9 +200,10 @@
   color: var(--color-white);
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   font-weight: 500;
   transition: color 180ms var(--ease-out), opacity 180ms var(--ease-out);
+  white-space: nowrap;
 }
 
 .nav__links a:hover {
@@ -193,9 +261,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-8);
+  gap: var(--space-6);
   opacity: 0;
   transition: opacity 300ms var(--ease-out);
+  overflow-y: auto;
+  padding: var(--space-16) var(--space-4);
 }
 
 .mobile-menu.active {
@@ -225,7 +295,7 @@
   line-height: 1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
 }
@@ -358,6 +428,17 @@
 
 .btn--dark:hover {
   background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.btn--rose {
+  border-color: var(--color-rose);
+  color: var(--color-rose);
+  background: transparent;
+}
+
+.btn--rose:hover {
+  background: var(--color-rose);
   color: var(--color-white);
 }
 
@@ -607,6 +688,31 @@
   margin-bottom: var(--space-3);
 }
 
+.timeline__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.timeline__links a {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 1px;
+  transition: color 180ms var(--ease-out);
+}
+
+.timeline__links a:hover {
+  color: var(--color-dark);
+}
+
 .timeline__tags {
   display: flex;
   flex-wrap: wrap;
@@ -658,6 +764,10 @@
   background: var(--color-cream);
   padding: var(--space-8);
   border: 1px solid var(--color-divider);
+}
+
+.section--cream .essential-card {
+  background: var(--color-white);
 }
 
 .essential-card__label {
@@ -883,6 +993,179 @@
 }
 
 /* ============================================================
+   EES/ETIAS STATUS TABLE
+   ============================================================ */
+.ees-table {
+  width: 100%;
+  max-width: var(--content-default);
+  margin: var(--space-6) auto;
+}
+
+.ees-table th {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-olive);
+  font-weight: 500;
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 2px solid var(--color-divider);
+}
+
+.ees-table td {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+  color: #4a4a4a;
+  vertical-align: top;
+}
+
+.ees-table td:first-child {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+/* ============================================================
+   IMMIGRATION / SCHENGEN SECTION
+   ============================================================ */
+.immigration-section {
+  max-width: var(--content-default);
+  margin: 0 auto;
+}
+
+.immigration-section h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-dark);
+  margin-bottom: var(--space-4);
+  font-weight: 400;
+  margin-top: var(--space-12);
+}
+
+.immigration-section h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-olive);
+  margin-bottom: var(--space-4);
+  margin-top: var(--space-8);
+  font-weight: 600;
+}
+
+.immigration-section p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: #4a4a4a;
+  line-height: 1.8;
+  margin-bottom: var(--space-3);
+}
+
+.immigration-section strong {
+  color: var(--color-dark);
+}
+
+.immigration-section ol {
+  list-style: none;
+  counter-reset: steps;
+  padding: 0;
+  max-width: var(--content-default);
+}
+
+.immigration-section ol li {
+  counter-increment: steps;
+  padding-left: var(--space-8);
+  position: relative;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: #4a4a4a;
+  line-height: 1.8;
+}
+
+.immigration-section ol li::before {
+  content: counter(steps) ".";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+}
+
+.immigration-section a {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.immigration-section a:hover {
+  color: var(--color-dark);
+}
+
+.immigration-warning {
+  padding: var(--space-4) var(--space-6);
+  background: #fdf6e3;
+  border-left: 3px solid var(--color-accent);
+  margin: var(--space-6) 0;
+  max-width: var(--content-default);
+}
+
+.immigration-warning p {
+  margin-bottom: 0;
+}
+
+.immigration-sources {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: #888;
+  margin-top: var(--space-4);
+}
+
+.immigration-sources a {
+  color: #888;
+  border-bottom-color: #ccc;
+}
+
+/* ============================================================
+   STAT CARDS (for ETIAS stats)
+   ============================================================ */
+.stat-cards {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin: var(--space-6) 0;
+}
+
+.stat-card {
+  background: var(--color-cream);
+  border: 1px solid var(--color-divider);
+  padding: var(--space-4) var(--space-6);
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.section--cream .stat-card {
+  background: var(--color-white);
+}
+
+.stat-card__number {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-accent-dark);
+}
+
+.stat-card__label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-top: var(--space-1);
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
@@ -945,6 +1228,26 @@
   text-decoration: none;
 }
 
+.footer__quote {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text-muted);
+  text-align: center;
+  max-width: var(--content-narrow);
+  margin: 0 auto var(--space-8);
+  line-height: 1.6;
+}
+
+.footer__signoff {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-accent-dark);
+  text-align: center;
+  margin-bottom: var(--space-10);
+  letter-spacing: 0.05em;
+}
+
 @media (max-width: 768px) {
   .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
   .footer__bottom { flex-direction: column; gap: var(--space-4); text-align: center; }
@@ -952,51 +1255,6 @@
 
 @media (max-width: 480px) {
   .footer__inner { grid-template-columns: 1fr; }
-}
-
-/* ============================================================
-   FLIGHT BANNER
-   ============================================================ */
-.flight-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  background: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: var(--space-3) var(--space-8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-6);
-  transform: translateY(100%);
-  transition: transform 400ms var(--ease-out);
-}
-
-.flight-banner.visible {
-  transform: translateY(0);
-}
-
-.flight-banner__text {
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--color-accent);
-  font-weight: 500;
-}
-
-.flight-banner__dismiss {
-  color: rgba(255,255,255,0.4);
-  cursor: pointer;
-  font-size: 18px;
-  transition: color 180ms var(--ease-out);
-}
-
-.flight-banner__dismiss:hover {
-  color: var(--color-white);
 }
 
 /* ============================================================
@@ -1023,7 +1281,7 @@
    ============================================================ */
 .back-to-top {
   position: fixed;
-  bottom: 70px;
+  bottom: 24px;
   right: var(--space-6);
   z-index: 80;
   width: 44px;
@@ -1093,7 +1351,6 @@
   margin-top: var(--space-1);
 }
 
-/* Weather detail row (for section-specific weather cards) */
 .weather-detail {
   display: flex;
   flex-wrap: wrap;
@@ -1109,8 +1366,16 @@
   letter-spacing: 0.05em;
 }
 
+.weather-tip {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-accent-dark);
+  margin-top: var(--space-2);
+  font-style: italic;
+}
+
 /* ============================================================
-   DAY NAV PILLS (floating when inside day sections)
+   DAY NAV PILLS
    ============================================================ */
 .day-nav {
   position: sticky;
@@ -1125,6 +1390,11 @@
   justify-content: center;
   gap: var(--space-2) var(--space-3);
   border-bottom: 1px solid var(--color-divider);
+  transition: top 300ms var(--ease-out);
+}
+
+.day-nav--pill-visible {
+  top: 96px;
 }
 
 .day-nav__pill {
@@ -1155,7 +1425,12 @@
   .day-nav {
     justify-content: center;
     padding: var(--space-2) var(--space-4);
-    gap: var(--space-2);
+    gap: var(--space-1) var(--space-2);
+  }
+  .day-nav__pill {
+    font-size: 10px;
+    padding: var(--space-1) var(--space-3);
+    letter-spacing: 0.08em;
   }
 }
 
@@ -1195,7 +1470,7 @@
 }
 
 /* ============================================================
-   NEARBY GRID (for nearby points of interest)
+   NEARBY GRID
    ============================================================ */
 .nearby-grid {
   display: grid;
@@ -1268,75 +1543,6 @@
 }
 
 /* ============================================================
-   IMPORTANT INFO SECTION (dark theme cards)
-   ============================================================ */
-.info-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--space-6);
-  max-width: var(--content-wide);
-  margin: 0 auto;
-}
-
-.info-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: var(--space-8);
-}
-
-.info-card__label {
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--color-accent);
-  margin-bottom: var(--space-4);
-  font-weight: 500;
-}
-
-.info-card__title {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  color: var(--color-white);
-  margin-bottom: var(--space-4);
-  font-weight: 400;
-}
-
-.info-card__body {
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,0.7);
-  line-height: 1.8;
-}
-
-.info-card__body p {
-  margin-bottom: var(--space-3);
-}
-
-.info-card__body strong {
-  color: var(--color-white);
-}
-
-.info-card__body ul {
-  list-style: none;
-  padding: 0;
-}
-
-.info-card__body ul li {
-  padding-left: var(--space-4);
-  position: relative;
-  margin-bottom: var(--space-2);
-}
-
-.info-card__body ul li::before {
-  content: '·';
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
-  font-weight: 700;
-}
-
-/* ============================================================
    LANGUAGE / PRONUNCIATION / FOOD TABLES
    ============================================================ */
 .phrase-table {
@@ -1388,7 +1594,6 @@
   font-weight: 400;
 }
 
-/* Table section heading within essentials */
 .table-section-heading {
   font-family: var(--font-display);
   font-size: var(--text-xl);
@@ -1466,6 +1671,252 @@
 }
 
 /* ============================================================
+   STREET VIEWS GRID
+   ============================================================ */
+.street-views-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  max-width: var(--content-wide);
+  margin: var(--space-8) auto 0;
+}
+
+.street-view-card {
+  background: var(--color-cream);
+  border: 1px solid var(--color-divider);
+  padding: var(--space-6);
+  transition: box-shadow 200ms var(--ease-out);
+}
+
+.street-view-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.street-view-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-dark);
+  margin-bottom: var(--space-1);
+  font-weight: 400;
+}
+
+.street-view-card__address {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: #888;
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.02em;
+}
+
+.street-view-card__link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-rose);
+  border: 1px solid var(--color-rose);
+  padding: var(--space-2) var(--space-6);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 180ms var(--ease-out);
+}
+
+.street-view-card__link:hover {
+  background: var(--color-rose);
+  color: var(--color-white);
+}
+
+.street-view-card__extra {
+  display: inline-block;
+  margin-left: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-accent);
+  font-weight: 500;
+}
+
+.street-view-city-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-olive);
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-4);
+  font-weight: 600;
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-divider);
+}
+
+.street-view-city-label:first-of-type {
+  margin-top: 0;
+}
+
+/* ============================================================
+   HISTORY SECTION
+   ============================================================ */
+.history-accordion {
+  max-width: var(--content-default);
+  margin: var(--space-8) auto 0;
+}
+
+.history-accordion .accordion__content__inner {
+  line-height: 1.9;
+}
+
+/* ============================================================
+   MAP SECTION
+   ============================================================ */
+.map-container {
+  width: 100%;
+  height: 500px;
+  border: 1px solid var(--color-divider);
+  margin-top: var(--space-6);
+}
+
+.map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  justify-content: center;
+}
+
+.map-filter-btn {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-rose);
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--color-rose);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 180ms var(--ease-out);
+}
+
+.map-filter-btn:hover,
+.map-filter-btn.active {
+  background: var(--color-rose);
+  color: var(--color-white);
+}
+
+@media (max-width: 640px) {
+  .map-container { height: 350px; }
+}
+
+/* ============================================================
+   AIR & HOTEL SECTION
+   ============================================================ */
+.flight-table {
+  width: 100%;
+  max-width: var(--content-wide);
+  margin: var(--space-6) auto 0;
+}
+
+.flight-table th {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-olive);
+  font-weight: 500;
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 2px solid var(--color-divider);
+}
+
+.flight-table td {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+  color: #4a4a4a;
+  vertical-align: top;
+}
+
+.flight-table td:first-child {
+  font-weight: 600;
+}
+
+.flight-table .status-sched { color: var(--color-accent-dark); }
+.flight-table .status-arrived { color: #3a5a28; }
+
+.hotel-table {
+  width: 100%;
+  max-width: var(--content-wide);
+  margin: var(--space-6) auto 0;
+}
+
+.hotel-table th {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-olive);
+  font-weight: 500;
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 2px solid var(--color-divider);
+}
+
+.hotel-table td {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+  color: #4a4a4a;
+  vertical-align: top;
+}
+
+.hotel-table td:first-child {
+  font-weight: 600;
+}
+
+.booking-ref {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  background: var(--color-sand-deep);
+  padding: var(--space-1) var(--space-3);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.app-links {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+.app-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-rose);
+  border: 1px solid var(--color-rose);
+  padding: var(--space-2) var(--space-6);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 180ms var(--ease-out);
+}
+
+.app-link:hover {
+  background: var(--color-rose);
+  color: var(--color-white);
+}
+
+/* ============================================================
    UTILITIES
    ============================================================ */
 .text-center { text-align: center; }
@@ -1477,3 +1928,18 @@
 .mb-10 { margin-bottom: var(--space-10); }
 .max-narrow { max-width: var(--content-narrow); }
 .max-default { max-width: var(--content-default); }
+
+/* Pronunciation audio icon */
+.pronunciation {
+  font-size: 0.85em;
+  cursor: default;
+  margin-left: 2px;
+  opacity: 0.7;
+}
+
+/* Flag emoji helper */
+.flags {
+  font-size: var(--text-xl);
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-6);
+}
