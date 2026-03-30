@@ -39,6 +39,7 @@
       <li><a href="#saturday">Saturday</a></li>
       <li><a href="#sunday">Sunday</a></li>
       <li><a href="#essentials">Essentials</a></li>
+      <li><a href="#important-info">Important Info</a></li>
     </ul>
     <button class="nav__hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
       <span></span>
@@ -56,6 +57,7 @@
     <a href="#saturday">Saturday</a>
     <a href="#sunday">Sunday</a>
     <a href="#essentials">Essentials</a>
+    <a href="#important-info">Important Info</a>
   </div>
 
 
@@ -126,6 +128,7 @@
     <a href="#saturday" class="day-nav__pill" data-section="saturday">Saturday</a>
     <a href="#sunday" class="day-nav__pill" data-section="sunday">Sunday</a>
     <a href="#essentials" class="day-nav__pill" data-section="essentials">Essentials</a>
+    <a href="#important-info" class="day-nav__pill" data-section="important-info">Important Info</a>
   </nav>
 
 
@@ -142,6 +145,21 @@
 
   <section class="section section--sand">
     <div class="section__inner">
+
+      <!-- Copenhagen Weather Card -->
+      <div class="weather-strip reveal" style="margin-bottom: var(--space-10);">
+        <div class="weather-card" style="flex: 1; max-width: 100%;">
+          <p class="weather-card__day">Copenhagen · Wed–Fri</p>
+          <p class="weather-card__temp">43° / 34°F</p>
+          <div class="weather-detail">
+            <span>Rain 20%</span>
+            <span>Wind 12 mph</span>
+            <span>Sunrise 6:32 AM</span>
+            <span>Sunset 6:45 PM</span>
+          </div>
+        </div>
+      </div>
+
       <div class="timeline">
 
         <!-- Wed Night -->
@@ -158,7 +176,7 @@
 
         <!-- 7:00 AM Arrive -->
         <div class="timeline__item reveal">
-          <div class="timeline__time">7:00 AM</div>
+          <div class="timeline__time">Thu 7:00 AM</div>
           <div class="timeline__body">
             <h3>Arrive CPH → Scandic Nørreport</h3>
             <p>M2 Metro from the airport, 13 minutes. Hotel is directly across from Nørreport station.</p>
@@ -174,11 +192,42 @@
           <div class="timeline__time">Hotel</div>
           <div class="timeline__body">
             <h3><a href="https://www.scandichotels.com/hotels/denmark/copenhagen/scandic-norreport" target="_blank" rel="noopener noreferrer">Scandic Nørreport</a></h3>
-            <p>4-star hotel in the heart of Copenhagen. Rooftop bar Level Six with city views. Breakfast included, plus complimentary happy hour 4–5 PM daily.</p>
+            <p>4-star hotel in the heart of Copenhagen. Breakfast included, plus complimentary happy hour 4–5 PM daily.</p>
+            <p><strong>Rooftop bar "Level Six"</strong> — Mon–Thu til 11:30 PM, Fri–Sat til 1 AM, Sun til 11 PM. City views across the Copenhagen skyline.</p>
+            <p><strong>Breakfast:</strong> Mon–Fri 6:30–9:30 AM, Weekends 7:30–10:30 AM.</p>
+            <p><strong>Phone:</strong> <a href="tel:+4572315001">+45 7231 5001</a></p>
             <div class="timeline__tags">
               <span class="tag">4-Star</span>
               <span class="tag">Breakfast Included</span>
               <span class="tag">Happy Hour 4–5 PM</span>
+              <span class="tag">Rooftop Bar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nearby -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">Nearby</div>
+          <div class="timeline__body">
+            <h3>Walking Distance from Hotel</h3>
+            <p>Scandic Nørreport is superbly located — everything is within a few minutes' walk.</p>
+            <div class="nearby-grid">
+              <div class="nearby-item">
+                <span class="nearby-item__name">Torvehallerne (food market)</span>
+                <span class="nearby-item__distance">1 min</span>
+              </div>
+              <div class="nearby-item">
+                <span class="nearby-item__name">Round Tower</span>
+                <span class="nearby-item__distance">3 min</span>
+              </div>
+              <div class="nearby-item">
+                <span class="nearby-item__name">Nyhavn</span>
+                <span class="nearby-item__distance">10 min</span>
+              </div>
+              <div class="nearby-item">
+                <span class="nearby-item__name">Strøget (shopping street)</span>
+                <span class="nearby-item__distance">8 min</span>
+              </div>
             </div>
           </div>
         </div>
@@ -187,11 +236,15 @@
         <div class="timeline__item reveal">
           <div class="timeline__time">Charlotte</div>
           <div class="timeline__body">
-            <h3>Charlotte's Place</h3>
+            <h3>Charlotte's Place — Amagerbro</h3>
             <p><a href="https://maps.google.com/?q=Holmbladsgade+70B,+Amager,+Copenhagen" target="_blank" rel="noopener noreferrer">Holmbladsgade 70B, Amager</a> — take the M2 to Amagerbro, 15 minutes from Nørreport.</p>
+            <p><strong>Amagerbro</strong> is a vibrant, locals-favorite neighborhood on Amager island. Far from the tourist trail, this is where Copenhagen's creative class lives.</p>
+            <p><strong>Ingolf's Kaffebar</strong> — cozy corner café, popular with students. Good pastries, strong coffee, and a genuine neighborhood feel.</p>
+            <p><strong>Amager Beach Park</strong> — Copenhagen's urban beach, a short bus ride east. Even in March, the boardwalk is a beautiful walk with views to Sweden.</p>
+            <p><strong>Amagerbrogade</strong> — the main street with shops, bakeries, and cafés. Walk from the station and you'll feel the energy of a real Copenhagen neighborhood.</p>
             <div class="timeline__tags">
               <span class="tag">M2 → Amagerbro</span>
-              <span class="tag">15 min</span>
+              <span class="tag">15 min from Nørreport</span>
             </div>
           </div>
         </div>
@@ -201,9 +254,32 @@
           <div class="timeline__time">Thu 6:15 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=The+Union+Kitchen+Vodroffsvej+39+Copenhagen" target="_blank" rel="noopener noreferrer">The Union Kitchen</a></h3>
-            <p>Dinner for four — James, Charlotte, Olivia &amp; Temple. Vodroffsvej 39, Frederiksberg.</p>
+            <p>Dinner for four — James, Charlotte, Olivia &amp; Temple.</p>
+            <p><strong>Address:</strong> Vodroffsvej 39, Frederiksberg.</p>
+            <p><strong>Hours:</strong> Open until midnight.</p>
+            <p><strong>Phone:</strong> <a href="tel:+4524450605">+45 24 45 06 05</a></p>
+            <p><strong>Website:</strong> <a href="https://theunionkitchen.dk" target="_blank" rel="noopener noreferrer">theunionkitchen.dk</a></p>
+            <p><strong>Transit:</strong> M1 → Frederiksberg station, 6 min from Nørreport. Short walk from there.</p>
             <div class="timeline__tags">
               <span class="tag tag--confirmed">Confirmed · 4 Guests</span>
+              <span class="tag">M1 → Frederiksberg</span>
+              <span class="tag">6 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friday Departure Logistics -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">Fri Departure</div>
+          <div class="timeline__body">
+            <h3>Getting to the Airport</h3>
+            <p>Two departure routes depending on where you are:</p>
+            <p><strong>From Charlotte's (Amagerbro):</strong> M2 Amagerbro → CPH Airport ~10 min. The fastest route — Amagerbro is already on the airport line.</p>
+            <p><strong>From hotel (Nørreport):</strong> M2 Nørreport → CPH Airport ~13 min. Direct, no transfers needed.</p>
+            <div class="timeline__tags">
+              <span class="tag">M2 Metro</span>
+              <span class="tag">10–13 min</span>
+              <span class="tag">Direct Line</span>
             </div>
           </div>
         </div>
@@ -213,7 +289,7 @@
           <div class="timeline__time">Fri Evening</div>
           <div class="timeline__body">
             <h3>Copenhagen → Zürich</h3>
-            <p>Evening flight to Zürich. Say goodbye to Copenhagen.</p>
+            <p>Evening flight to Zürich. Say goodbye to Copenhagen and Charlotte.</p>
             <div class="timeline__tags">
               <span class="tag">Flight</span>
             </div>
@@ -221,6 +297,35 @@
         </div>
 
       </div>
+
+      <!-- Copenhagen Metro Ticketing Guide (Accordion) -->
+      <div style="margin-top: var(--space-16);">
+        <h3 class="section__eyebrow reveal" style="margin-bottom: var(--space-6);">Copenhagen Metro Ticketing Guide</h3>
+        <div class="accordion reveal">
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Metro Tickets &amp; Travel Cards
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>Rejsekort App:</strong> Contactless travel card — load credit and check in/out on your phone. Works across metro, bus, and train.</p>
+                <p><strong>Rejsebillet App:</strong> Buy single tickets or City Pass directly on your phone. Easiest option for short stays.</p>
+                <p><strong>Ticket Machines:</strong> Available at every metro station. Accept all major cards — Visa, Mastercard, contactless.</p>
+                <p><strong>City Pass:</strong> Unlimited travel for 24–120 hours across all zones. Best value for the 2-day stopover.</p>
+                <p><strong>Single Tickets:</strong> Valid for transfers within the time window shown on your ticket. Check validity before transferring.</p>
+                <p><strong>⚠ Warning:</strong> Fine for traveling without a valid ticket is DKK 750 — always validate before boarding. Inspectors check frequently.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copenhagen Closing Note -->
+      <div class="closing-note reveal" style="margin-top: var(--space-10);">
+        <p>Copenhagen is compact and walkable. The M2 connects everything — airport, hotel, Charlotte's neighborhood, and the city center.</p>
+      </div>
+
     </div>
   </section>
 
@@ -238,6 +343,21 @@
 
   <section class="section section--sand">
     <div class="section__inner">
+
+      <!-- Friday Weather Card -->
+      <div class="weather-strip reveal" style="margin-bottom: var(--space-10);">
+        <div class="weather-card" style="flex: 1; max-width: 100%;">
+          <p class="weather-card__day">Friday 27 March · Zürich</p>
+          <p class="weather-card__temp">47° / 37°F</p>
+          <div class="weather-detail">
+            <span>Rain 15%</span>
+            <span>Wind 9 mph</span>
+            <span>Sunrise 6:48 AM</span>
+            <span>Sunset 7:32 PM</span>
+          </div>
+        </div>
+      </div>
+
       <div class="timeline">
 
         <!-- Airport Transfer -->
@@ -245,11 +365,12 @@
           <div class="timeline__time">7:40 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Zurich+Marriott+Hotel+Neumühlequai+42" target="_blank" rel="noopener noreferrer">Airport → Zürich Marriott Hotel</a></h3>
-            <p>Airport Express train to Zürich HB, then Tram 13 to Sihlquai/HB. Total journey 30–40 minutes.</p>
+            <p>Airport Express → Zürich HB, 10 min. Tram 13 → Sihlquai/HB, 2 min. 3 min walk to hotel.</p>
+            <p>Expect arrival ~8:30–8:45 PM.</p>
             <div class="timeline__tags">
               <span class="tag">Airport Express</span>
               <span class="tag">Tram 13</span>
-              <span class="tag">30–40 min</span>
+              <span class="tag">Zürich Card ✓</span>
             </div>
           </div>
         </div>
@@ -259,10 +380,14 @@
           <div class="timeline__time">9:00 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=White+Elephant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">White Elephant</a></h3>
-            <p>Michelin-listed Thai restaurant, a Zürich institution since 1991. Located in the hotel — no commute needed. Excellent vegetarian options available.</p>
+            <p>Michelin-listed Thai restaurant — staffed entirely by Thai chefs. A Zürich institution since 1991. Located in the hotel, so no commute needed after a long travel day.</p>
+            <p>Excellent vegetarian options available. The curries are exceptional.</p>
+            <p><strong>Hours:</strong> Dinner daily 6–10 PM.</p>
+            <p><strong>Phone:</strong> <a href="tel:+41443607322">+41 44 360 73 22</a></p>
             <div class="timeline__tags">
               <span class="tag">Michelin-Listed</span>
               <span class="tag">Thai</span>
+              <span class="tag">Since 1991</span>
               <span class="tag">Vegetarian-Friendly</span>
             </div>
           </div>
@@ -273,15 +398,27 @@
           <div class="timeline__time">10:30 PM</div>
           <div class="timeline__body">
             <h3>Optional — Lenox Bar</h3>
-            <p>Rare whiskies and craft cocktails. A stylish nightcap without leaving the hotel.</p>
+            <p>Rare whiskies and craft cocktails. A stylish nightcap without leaving the hotel. Low lighting, leather seating, and an impressive spirits collection.</p>
             <div class="timeline__tags">
               <span class="tag">Optional</span>
               <span class="tag">Hotel Bar</span>
+            </div>
+
+            <!-- Extra Time Friday -->
+            <div class="alt-card alt-card--extra">
+              <p class="alt-card__label">✦ Extra Time</p>
+              <p>If you have extra time: The Limmat riverfront walk from the hotel is magical at night — lit bridges, reflections on the water, and the old town glowing across the river. Walk south along Neumühlequai toward the lake for 10–15 minutes and back.</p>
             </div>
           </div>
         </div>
 
       </div>
+
+      <!-- Friday Closing Note -->
+      <div class="closing-note reveal">
+        <p>Friday is a travel day. Don't overplan — settle in, eat well, and rest for Saturday's full itinerary.</p>
+      </div>
+
     </div>
   </section>
 
@@ -300,7 +437,27 @@
   <section class="section section--sand">
     <div class="section__inner">
       <p class="section__eyebrow reveal">The Big Day</p>
-      <p class="section__subtitle reveal" style="margin-bottom: var(--space-12);">No hotel return before dinner — pack everything you'll need for the full day.</p>
+      <p class="section__subtitle reveal" style="margin-bottom: var(--space-4);">No hotel return before dinner — pack everything you'll need for the full day.</p>
+
+      <!-- Route Summary -->
+      <div class="route-summary reveal" style="margin-bottom: var(--space-6);">
+        <p>Uetliberg → Sprüngli → Kunsthaus → Old Town → Lindenhof → Aperitivo → Zeughauskeller</p>
+        <p>Leave hotel at 10:00 AM.</p>
+      </div>
+
+      <!-- Saturday Weather Card -->
+      <div class="weather-strip reveal" style="margin-bottom: var(--space-10);">
+        <div class="weather-card" style="flex: 1; max-width: 100%;">
+          <p class="weather-card__day">Saturday 28 March · Zürich</p>
+          <p class="weather-card__temp">49° / 36°F</p>
+          <div class="weather-detail">
+            <span>Rain 10%</span>
+            <span>Wind 6 mph</span>
+            <span>Sunrise 6:46 AM</span>
+            <span>Sunset 7:34 PM</span>
+          </div>
+        </div>
+      </div>
 
       <div class="timeline">
 
@@ -310,6 +467,9 @@
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Uetliberg+Zurich" target="_blank" rel="noopener noreferrer">Uetliberg Summit — 871 m</a></h3>
             <p>S10 train from Zürich HB, 20 minutes to the top. Panoramic views of the city, lake, and Alps. Covered by Zürich Card.</p>
+            <p>Walk 10 min to the summit tower for the full panorama. Perfect sketchbook moment.</p>
+            <p><strong>Timing:</strong> Depart 10:00 AM · Arrive 10:20 AM · 40 min at summit · Return train 11:10 AM · Back HB 11:30 AM.</p>
+            <p><strong>⚠ Felsenegg cable car CLOSED 2 Mar – 10 Apr 2026.</strong></p>
             <div class="timeline__tags">
               <span class="tag">S10 from HB</span>
               <span class="tag">20 min</span>
@@ -319,24 +479,29 @@
             <!-- Rain Alternatives -->
             <div class="alt-card">
               <p class="alt-card__label">☁ Cloudy Alternative</p>
-              <p><strong>Polybahn + ETH Terrace</strong> — historic funicular to ETH Zürich's terrace for sweeping city views, rain or shine.</p>
+              <p><strong>Polybahn + ETH Terrace</strong> — historic funicular to ETH Zürich's terrace for sweeping city views, rain or shine. A 90-second ride from Central station.</p>
             </div>
             <div class="alt-card">
               <p class="alt-card__label">🌧 Full Rain Alternative</p>
-              <p><strong><a href="https://maps.google.com/?q=Landesmuseum+Zurich" target="_blank" rel="noopener noreferrer">Landesmuseum</a></strong> — Swiss National Museum, right next to Zürich HB. World-class cultural history under one roof.</p>
+              <p><strong><a href="https://maps.google.com/?q=Landesmuseum+Zurich" target="_blank" rel="noopener noreferrer">Landesmuseum</a></strong> — Swiss National Museum, right next to Zürich HB. World-class cultural history under one roof. Free with Zürich Card.</p>
             </div>
           </div>
         </div>
 
         <!-- Sprüngli -->
         <div class="timeline__item reveal">
-          <div class="timeline__time">12:45 PM</div>
+          <div class="timeline__time">12:00 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Confiserie+Sprüngli+Bahnhofstrasse+Zurich" target="_blank" rel="noopener noreferrer">Café Sprüngli</a></h3>
             <p>Legendary confiserie since 1836. Home of the Luxemburgerli — delicate bite-size macarons in every flavour. A Zürich ritual.</p>
+            <p>The hot chocolate is considered legendary by locals. Bite-sized, seasonal, unlike anything from Copenhagen.</p>
+            <p><strong>Hours:</strong> Sat 7:30 AM – 6:30 PM.</p>
+            <p><strong>Address:</strong> Bahnhofstrasse 21.</p>
+            <p><strong>Transit:</strong> Walk from HB, OR Tram 13 → Paradeplatz, 5 min.</p>
             <div class="timeline__tags">
               <span class="tag">Since 1836</span>
               <span class="tag">Luxemburgerli</span>
+              <span class="tag">Hot Chocolate</span>
             </div>
           </div>
         </div>
@@ -346,11 +511,17 @@
           <div class="timeline__time">1:30 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Kunsthaus+Zurich" target="_blank" rel="noopener noreferrer">Kunsthaus Zürich</a></h3>
-            <p>Switzerland's largest art museum — free with Zürich Card. The Bührle Collection of Impressionists, Munch, Giacometti, and the stunning Chipperfield extension.</p>
+            <p>Switzerland's largest art museum — free with Zürich Card. The stunning Chipperfield extension doubled the museum's size in 2021.</p>
+            <p>Bührle Collection (Monet, Cézanne, Renoir), Munch (largest collection outside Norway), Giacometti, and Pipilotti Rist.</p>
+            <p>Plan two hours.</p>
+            <p><strong>Hours:</strong> Sat–Sun 10 AM – 6 PM.</p>
+            <p><strong>Address:</strong> Heimplatz 1.</p>
+            <p><strong>Transit:</strong> Walk 15 min E from Sprüngli, OR Tram 3 Paradeplatz → Kunsthaus, 6 min.</p>
             <div class="timeline__tags">
               <span class="tag">Free w/ Zürich Card</span>
               <span class="tag">Bührle Collection</span>
               <span class="tag">Munch · Giacometti</span>
+              <span class="tag">Chipperfield Extension</span>
             </div>
           </div>
         </div>
@@ -360,19 +531,42 @@
           <div class="timeline__time">3:00 PM</div>
           <div class="timeline__body">
             <h3>Lunch at Kunsthaus Café</h3>
-            <p>Late lunch inside the museum. Light seasonal dishes in the bright Chipperfield wing café.</p>
+            <p>Late lunch inside the museum. Light seasonal dishes in the bright Chipperfield wing café. Floor-to-ceiling windows overlooking Heimplatz.</p>
+            <p><strong>Hours:</strong> Sat 9 AM – 9 PM.</p>
             <div class="timeline__tags">
               <span class="tag">Casual</span>
+              <span class="tag">Museum Café</span>
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Saturday Old Town Image Divider -->
+  <div class="image-divider">
+    <img src="./assets/saturday-oldtown.png" alt="Zürich Old Town with Grossmünster twin towers and medieval architecture along the Limmat river" loading="lazy">
+    <div class="image-divider__overlay">
+      <h2 class="image-divider__title">The Old Town</h2>
+      <p class="image-divider__sub">Grossmünster · Fraumünster · Lindenhof</p>
+    </div>
+  </div>
+
+  <section class="section section--sand">
+    <div class="section__inner">
+      <div class="timeline">
 
         <!-- Old Town -->
         <div class="timeline__item reveal">
           <div class="timeline__time">4:15 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Augustinergasse+Zurich" target="_blank" rel="noopener noreferrer">Old Town Walk</a></h3>
-            <p>Stroll through the medieval heart of Zürich: Augustinergasse's painted bay windows, up to Grossmünster's twin towers, across to Fraumünster for the Chagall stained-glass windows, and into the elegant Münsterhof square.</p>
+            <p>Cross the Limmat to Grossmünster — twin-towered Romanesque cathedral, begun in the 1100s. Climb the tower for one of the best views in the city.</p>
+            <p>Then Fraumünster with Marc Chagall's magnificent stained glass windows — five towering panels of luminous color.</p>
+            <p>Münsterhof square beyond — car-free and beautiful. One of the finest public squares in Switzerland.</p>
+            <p>18 min walk W from Kunsthaus.</p>
+            <p><strong>Hours:</strong> Sat 10 AM – 5 PM.</p>
             <div class="timeline__tags">
               <span class="tag">Augustinergasse</span>
               <span class="tag">Grossmünster</span>
@@ -388,9 +582,11 @@
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Lindenhof+Zurich" target="_blank" rel="noopener noreferrer">Lindenhof Hill</a></h3>
             <p>Panoramic views from the city's ancient Roman fort hilltop. Linden trees, chess players, and the best vantage point in the old town.</p>
+            <p>A large public chessboard. Stone benches — ideal for the sketchbook. Late afternoon March light is warm and low.</p>
             <div class="timeline__tags">
               <span class="tag">Panoramic Views</span>
               <span class="tag">Roman Fort</span>
+              <span class="tag">Sketchbook Spot</span>
             </div>
           </div>
         </div>
@@ -401,8 +597,11 @@
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Café+Bar+Münsterhof+Zurich" target="_blank" rel="noopener noreferrer">Café Bar Münsterhof</a></h3>
             <p>Pre-dinner drinks overlooking Münsterhof square. Aperol spritzes or local wine as the city lights come on.</p>
+            <p><strong>Address:</strong> Münsterhof 6.</p>
+            <p>Then walk 3 min direct to Zeughauskeller on Bahnhofstrasse.</p>
             <div class="timeline__tags">
-              <span class="tag">Drinks</span>
+              <span class="tag">Aperitivo</span>
+              <span class="tag">Münsterhof Square</span>
             </div>
           </div>
         </div>
@@ -412,16 +611,36 @@
           <div class="timeline__time">7:30 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Zeughauskeller+Bahnhofstrasse+28A+Zurich" target="_blank" rel="noopener noreferrer">Zeughauskeller</a></h3>
-            <p>Dinner in a 15th-century armory on Bahnhofstrasse 28A. Vaulted ceilings, long communal tables, and classic Swiss cuisine. A Zürich institution.</p>
+            <p>Dinner in a 15th-century armory on Bahnhofstrasse 28A. High ceilings, oak beams, long tables. Excellent Zürcher Geschnetzeltes — the city's signature veal dish in cream sauce.</p>
+            <p>A Zürich institution. The building has been an armory, a market hall, and now one of the city's most beloved restaurants.</p>
+            <p><strong>Phone:</strong> <a href="tel:+41442201515">+41 44 220 15 15</a></p>
+            <p>After dinner: Tram 13 → Sihlquai/HB, 5 min back to the hotel.</p>
             <div class="timeline__tags">
               <span class="tag tag--confirmed">Confirmed · 7:30 PM</span>
               <span class="tag">15th-Century Armory</span>
               <span class="tag">Swiss Cuisine</span>
+              <span class="tag">Geschnetzeltes</span>
             </div>
           </div>
         </div>
 
       </div>
+
+      <!-- Extra Time Saturday -->
+      <div style="max-width: var(--content-narrow); margin: var(--space-10) auto 0;">
+        <div class="alt-card alt-card--extra reveal">
+          <p class="alt-card__label">✦ Extra Time Saturday</p>
+          <p><strong>Niederdorf lanes</strong> — evening browsing through the old town's atmospheric cobbled streets. Boutiques, bookshops, and hidden courtyards.</p>
+          <p><strong>Cabaret Voltaire</strong> — birthplace of the Dada art movement. Hugo Ball, Tristan Tzara, and friends launched Dada here in 1916. A pilgrimage for art lovers.</p>
+          <p><strong>Beyer Watch Museum</strong> — free admission. Swiss watchmaking heritage on Bahnhofstrasse. 500 years of timekeeping in a compact, elegant space.</p>
+        </div>
+      </div>
+
+      <!-- Saturday Closing Note -->
+      <div class="closing-note reveal">
+        <p>Saturday is a full arc: mountain sunrise, city chocolate, world-class art, medieval streets, and a candlelit armory dinner. The best of Zürich in a single day.</p>
+      </div>
+
     </div>
   </section>
 
@@ -440,7 +659,21 @@
   <section class="section section--sand">
     <div class="section__inner">
       <p class="section__eyebrow reveal">Departure Day</p>
-      <p class="section__subtitle reveal" style="margin-bottom: var(--space-12);">Leave hotel by 6:00 PM sharp.</p>
+      <p class="section__subtitle reveal" style="margin-bottom: var(--space-4);">Leave hotel by 6:00 PM sharp. Full city window: 10 AM – 4:30 PM.</p>
+
+      <!-- Sunday Weather Card -->
+      <div class="weather-strip reveal" style="margin-bottom: var(--space-10);">
+        <div class="weather-card" style="flex: 1; max-width: 100%;">
+          <p class="weather-card__day">Sunday 29 March · Zürich · Palm Sunday</p>
+          <p class="weather-card__temp">48° / 35°F</p>
+          <div class="weather-detail">
+            <span>Rain 20%</span>
+            <span>Wind 11 mph</span>
+            <span>Sunrise 6:44 AM</span>
+            <span>Sunset 7:35 PM</span>
+          </div>
+        </div>
+      </div>
 
       <div class="timeline">
 
@@ -449,7 +682,11 @@
           <div class="timeline__time">10:00 AM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Haus+Hiltl+Zurich" target="_blank" rel="noopener noreferrer">Hiltl Brunch</a></h3>
-            <p>World's oldest vegetarian restaurant, est. 1898. Sunday brunch buffet with over 100 dishes — Indian, Mediterranean, Asian, Swiss. A Zürich classic.</p>
+            <p>World's oldest vegetarian restaurant, est. 1898. Sunday brunch buffet with over 100 dishes — Indian curries, Middle Eastern mezze, Swiss cheese boards, fresh pastries.</p>
+            <p>A Zürich classic. Arrive by 10 AM before the rush.</p>
+            <p><strong>Hours:</strong> Brunch 9:30 AM – 2:30 PM.</p>
+            <p><strong>Address:</strong> Sihlstrasse 28.</p>
+            <p><strong>Transit:</strong> Walk from hotel, OR Tram 13 → Paradeplatz + 3 min walk.</p>
             <div class="timeline__tags">
               <span class="tag">Since 1898</span>
               <span class="tag">100+ Dish Buffet</span>
@@ -463,24 +700,43 @@
           <div class="timeline__time">11:15 AM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Quaianlagen+Zurich" target="_blank" rel="noopener noreferrer">Lake Zürich Promenade</a></h3>
-            <p>Walk along the Quaianlagen — swans, sailboats, and the Alps in the distance. One of Europe's loveliest lakefront walks.</p>
+            <p>Quaianlagen park from Bürkliplatz. Walk along the lakefront — swans, sailboats, and the Alps in the distance. One of Europe's loveliest lakefront walks.</p>
+            <p>Find a bench. Draw the water. March light on the lake is extraordinary.</p>
             <div class="timeline__tags">
               <span class="tag">Quaianlagen</span>
+              <span class="tag">Bürkliplatz</span>
               <span class="tag">Alps Views</span>
             </div>
           </div>
         </div>
 
-        <!-- Optional Boat / Polybahn -->
+        <!-- Boat Cruise -->
         <div class="timeline__item reveal">
           <div class="timeline__time">11:45 AM</div>
           <div class="timeline__body">
-            <h3>Optional — Boat Cruise or Polybahn</h3>
-            <p>Short boat cruise on Lake Zürich (~40 min, covered by Zürich Card) <em>or</em> ride the Polybahn funicular for elevated city views.</p>
+            <h3>Optional — ZSG Short Rundfahrt</h3>
+            <p>Short boat cruise on Lake Zürich (~40 min, covered by Zürich Card). Departs from Bürkliplatz pier.</p>
+            <p>On a sunny March morning this is spectacular — Alps behind the city. Sketchbook on the upper deck. The return views of the old town from the water are unforgettable.</p>
             <div class="timeline__tags">
               <span class="tag">Optional</span>
               <span class="tag">Zürich Card</span>
               <span class="tag">~40 min</span>
+              <span class="tag">Bürkliplatz Pier</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Polybahn -->
+        <div class="timeline__item reveal">
+          <div class="timeline__time">12:30 PM</div>
+          <div class="timeline__body">
+            <h3>Optional — Polybahn</h3>
+            <p>90-second ride from Central up to ETH Zürich. Completely different perspective from Lindenhof — here you see the city spread out below with the lake stretching south toward the Alps.</p>
+            <p><strong>Address:</strong> Rämistrasse 101.</p>
+            <div class="timeline__tags">
+              <span class="tag">Optional</span>
+              <span class="tag">Zürich Card</span>
+              <span class="tag">90 sec</span>
             </div>
           </div>
         </div>
@@ -490,10 +746,14 @@
           <div class="timeline__time">1:00 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Fischerstube+Zürihorn+Zurich" target="_blank" rel="noopener noreferrer">Fischerstube Zürihorn</a></h3>
-            <p>Lunch at a lakeside terrace overlooking the water. Fresh Swiss fish and local specialties with a view.</p>
+            <p>Seasonal Swiss fish from Lake Zürich: smoked trout, perch fillets with lemon butter. Sitting on the terrace above the lake is one of Zürich's great pleasures.</p>
+            <p><strong>Address:</strong> Bellerivestrasse 160.</p>
+            <p><strong>Phone:</strong> <a href="tel:+41444222520">+41 44 422 25 20</a></p>
+            <p><strong>Recommended — book ahead.</strong></p>
             <div class="timeline__tags">
               <span class="tag">Lakeside Terrace</span>
               <span class="tag">Swiss Fish</span>
+              <span class="tag">Book Ahead</span>
             </div>
           </div>
         </div>
@@ -504,9 +764,13 @@
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=Museum+Rietberg+Zurich" target="_blank" rel="noopener noreferrer">Museum Rietberg</a></h3>
             <p>Asian, African, and Oceanic art in the beautiful Rieter Park. Free with Zürich Card. A contemplative way to spend the afternoon.</p>
+            <p>Wagner wrote Tristan here. The underground Emerald extension is architecturally stunning — a glass pavilion set into the hillside.</p>
+            <p><strong>Address:</strong> Gablerstrasse 15.</p>
+            <p><strong>Transit:</strong> OR Tram 7 from Bellevue → Museum Rietberg.</p>
             <div class="timeline__tags">
               <span class="tag">Free w/ Zürich Card</span>
               <span class="tag">Rieter Park</span>
+              <span class="tag">Emerald Extension</span>
             </div>
           </div>
         </div>
@@ -516,10 +780,13 @@
           <div class="timeline__time">5:15 PM</div>
           <div class="timeline__body">
             <h3><a href="https://maps.google.com/?q=eCHo+restaurant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">Farewell Dinner — eCHo</a></h3>
-            <p>Hotel's Swiss restaurant. Try the Züri Gschnätzlets — Zürich's signature veal in cream sauce. A proper farewell to the city.</p>
+            <p>Hotel's Swiss restaurant. Authentic Züri Gschnätzlets, cheese fondue, regional produce. A proper farewell to the city.</p>
+            <p><strong>Phone:</strong> <a href="tel:+41443607318">+41 44 360 73 18</a></p>
+            <p>Ask hotel to seat you at 5:15 PM — mention 8:25 PM flight.</p>
             <div class="timeline__tags">
               <span class="tag">Hotel Restaurant</span>
               <span class="tag">Züri Gschnätzlets</span>
+              <span class="tag">Cheese Fondue</span>
             </div>
           </div>
         </div>
@@ -528,17 +795,34 @@
         <div class="timeline__item reveal">
           <div class="timeline__time">6:00 PM</div>
           <div class="timeline__body">
-            <h3>Depart</h3>
-            <p>Walk to Zürich HB (3 min), Airport Express train (25 min). Flight at 8:25 PM. Allow extra time for check-in and security.</p>
+            <h3>Depart for Airport</h3>
+            <p>Walk 5 min to Zürich HB → Airport Express (every 10 min, 25 min ride) → ZRH Terminal.</p>
+            <p>Arrive ZRH by 6:30 PM — 2 hrs before your 8:25 PM flight.</p>
             <div class="timeline__tags">
               <span class="tag">Flight 8:25 PM</span>
               <span class="tag">Airport Express</span>
-              <span class="tag">25 min</span>
+              <span class="tag">25 min to ZRH</span>
             </div>
           </div>
         </div>
 
       </div>
+
+      <!-- Extra Time Sunday -->
+      <div style="max-width: var(--content-narrow); margin: var(--space-8) auto 0;">
+        <div class="alt-card alt-card--extra reveal">
+          <p class="alt-card__label">✦ Extra Time Sunday</p>
+          <p>Choose one optional — don't do both, and don't add stops after 3:30 PM.</p>
+          <p><strong>Polybahn + ETH terrace</strong> — 90-second funicular ride, city views, Einstein's university.</p>
+          <p><strong>Short boat cruise</strong> — Bürkliplatz pier, ~40 min, Alps behind the city.</p>
+        </div>
+      </div>
+
+      <!-- Verification Note -->
+      <div class="verification-note reveal" style="margin-top: var(--space-8);">
+        <p><strong>⚑ Confirm</strong> Zeughauskeller and eCHo reservations 48 hrs before. Check SBB app for disruptions. Verify Palm Sunday hours for all venues.</p>
+      </div>
+
     </div>
   </section>
 
@@ -551,11 +835,14 @@
       <p class="section__eyebrow reveal">Quick Reference</p>
       <h2 class="section__title reveal">Trip Essentials</h2>
 
+      <!-- Weather Advisory -->
+      <p class="section__subtitle reveal" style="margin-bottom: var(--space-8);">Layers + compact umbrella. March in Zürich can shift between sunshine and showers within an hour.</p>
+
       <!-- Essentials Grid -->
       <div class="essentials-grid" style="margin-top: var(--space-10);">
 
         <div class="essential-card reveal">
-          <p class="essential-card__label">Hotel</p>
+          <p class="essential-card__label">Hotel · Zürich</p>
           <p class="essential-card__value">Zürich Marriott Hotel</p>
           <p class="essential-card__detail">
             <a href="https://maps.google.com/?q=Neumühlequai+42+Zurich" target="_blank" rel="noopener noreferrer">Neumühlequai 42, 8006 Zürich</a><br>
@@ -564,30 +851,41 @@
         </div>
 
         <div class="essential-card reveal reveal-delay-1">
+          <p class="essential-card__label">Hotel · Copenhagen</p>
+          <p class="essential-card__value">Scandic Nørreport</p>
+          <p class="essential-card__detail">
+            Nørre Voldgade 80, Copenhagen<br>
+            <a href="tel:+4572315001">+45 7231 5001</a>
+          </p>
+        </div>
+
+        <div class="essential-card reveal reveal-delay-2">
           <p class="essential-card__label">Zürich Card</p>
           <p class="essential-card__value">72-Hour Pass</p>
           <p class="essential-card__detail">All trams, buses, boats, S-Bahn, Uetliberg + 40&nbsp;museums free. Activate in the ZVV app at the airport on arrival.</p>
         </div>
 
-        <div class="essential-card reveal reveal-delay-2">
+        <div class="essential-card reveal">
           <p class="essential-card__label">Home Stop</p>
           <p class="essential-card__value">Sihlquai / HB</p>
-          <p class="essential-card__detail">Tram stop 3 minutes' walk from the hotel. Trams&nbsp;4, 11, 13, 17 all stop here.</p>
-        </div>
-
-        <div class="essential-card reveal">
-          <p class="essential-card__label">Saturday Dinner</p>
-          <p class="essential-card__value">Zeughauskeller</p>
-          <p class="essential-card__detail">Confirmed, 7:30 PM · <a href="https://maps.google.com/?q=Zeughauskeller+Bahnhofstrasse+28A+Zurich" target="_blank" rel="noopener noreferrer">Bahnhofstrasse 28A</a></p>
+          <p class="essential-card__detail">Tram stop 3 minutes' walk from the hotel. Trams&nbsp;4, 11, 13, 17 all stop here.<br><strong>Note:</strong> Bahnhofquai/HB tram stop is closed until December 2026. Use Sihlquai/HB instead.</p>
         </div>
 
         <div class="essential-card reveal reveal-delay-1">
+          <p class="essential-card__label">Saturday Dinner</p>
+          <p class="essential-card__value">Zeughauskeller</p>
+          <p class="essential-card__detail">Confirmed, 7:30 PM · <a href="https://maps.google.com/?q=Zeughauskeller+Bahnhofstrasse+28A+Zurich" target="_blank" rel="noopener noreferrer">Bahnhofstrasse 28A</a><br><a href="tel:+41442201515">+41 44 220 15 15</a></p>
+        </div>
+
+        <div class="essential-card reveal reveal-delay-2">
           <p class="essential-card__label">Emergency</p>
           <p class="essential-card__value">112</p>
           <p class="essential-card__detail">
             <strong>112</strong> — Any emergency<br>
             <strong>144</strong> — Ambulance<br>
-            <strong>117</strong> — Police
+            <strong>117</strong> — Police<br>
+            <strong>118</strong> — Fire<br>
+            <strong>111</strong> — Out-of-hours Doctor
           </p>
         </div>
 
@@ -604,6 +902,7 @@
                 <th>Time</th>
                 <th>Venue</th>
                 <th>Status</th>
+                <th>Notes</th>
               </tr>
             </thead>
             <tbody>
@@ -612,48 +911,56 @@
                 <td>6:15 PM</td>
                 <td><a href="https://maps.google.com/?q=The+Union+Kitchen+Vodroffsvej+39+Copenhagen" target="_blank" rel="noopener noreferrer">The Union Kitchen, Copenhagen</a></td>
                 <td><span class="status-confirmed">Confirmed</span></td>
+                <td>4 guests · <a href="tel:+4524450605">+45 24 45 06 05</a></td>
               </tr>
               <tr>
                 <td>Fri 27</td>
                 <td>9:00 PM</td>
                 <td><a href="https://maps.google.com/?q=White+Elephant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">White Elephant</a></td>
                 <td><span class="status-walkin">Walk-in</span></td>
+                <td><span class="status-recommended">Recommended</span> · <a href="tel:+41443607322">+41 44 360 73 22</a></td>
               </tr>
               <tr>
                 <td>Sat 28</td>
-                <td>12:45 PM</td>
+                <td>12:00 PM</td>
                 <td><a href="https://maps.google.com/?q=Confiserie+Sprüngli+Bahnhofstrasse+Zurich" target="_blank" rel="noopener noreferrer">Café Sprüngli</a></td>
                 <td><span class="status-walkin">Walk-in</span></td>
+                <td>Bahnhofstrasse 21</td>
               </tr>
               <tr>
                 <td>Sat 28</td>
                 <td>3:00 PM</td>
                 <td>Kunsthaus Café</td>
                 <td><span class="status-walkin">Walk-in</span></td>
+                <td>Open Sat 9 AM – 9 PM</td>
               </tr>
               <tr>
                 <td>Sat 28</td>
                 <td>7:30 PM</td>
                 <td><a href="https://maps.google.com/?q=Zeughauskeller+Bahnhofstrasse+28A+Zurich" target="_blank" rel="noopener noreferrer">Zeughauskeller</a></td>
                 <td><span class="status-confirmed">Confirmed</span></td>
+                <td><a href="tel:+41442201515">+41 44 220 15 15</a></td>
               </tr>
               <tr>
                 <td>Sun 29</td>
                 <td>10:00 AM</td>
                 <td><a href="https://maps.google.com/?q=Haus+Hiltl+Zurich" target="_blank" rel="noopener noreferrer">Hiltl Brunch</a></td>
                 <td><span class="status-walkin">Walk-in</span></td>
+                <td>Sihlstrasse 28</td>
               </tr>
               <tr>
                 <td>Sun 29</td>
                 <td>1:00 PM</td>
                 <td><a href="https://maps.google.com/?q=Fischerstube+Zürihorn+Zurich" target="_blank" rel="noopener noreferrer">Fischerstube Zürihorn</a></td>
                 <td><span class="status-walkin">Walk-in</span></td>
+                <td><span class="status-recommended">Recommended — book ahead</span> · <a href="tel:+41444222520">+41 44 422 25 20</a></td>
               </tr>
               <tr>
                 <td>Sun 29</td>
                 <td>5:15 PM</td>
                 <td><a href="https://maps.google.com/?q=eCHo+restaurant+Zurich+Marriott" target="_blank" rel="noopener noreferrer">eCHo (Hotel)</a></td>
                 <td><span class="status-walkin">Walk-in</span></td>
+                <td>Book via hotel — mention 8:25 PM flight · <a href="tel:+41443607318">+41 44 360 73 18</a></td>
               </tr>
             </tbody>
           </table>
@@ -666,7 +973,27 @@
         <div class="transport-grid reveal">
           <div>
             <div class="transport-row">
-              <span class="transport-row__dest">Airport → Hotel</span>
+              <span class="transport-row__dest">CPH Airport → Nørreport</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">M2 Metro · 13 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Nørreport → Amagerbro (Charlotte)</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">M2 Metro · 15 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Amagerbro → CPH Airport</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">M2 Metro · ~10 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Nørreport → Frederiksberg</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">M1 Metro · 6 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">ZRH Airport → Hotel</span>
               <span class="transport-row__via"></span>
               <span class="transport-row__time">Airport Express + Tram 13 · 30–40 min</span>
             </div>
@@ -676,12 +1003,22 @@
               <span class="transport-row__time">S10 from HB · 20 min</span>
             </div>
             <div class="transport-row">
+              <span class="transport-row__dest">Hotel → Sprüngli</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Tram 13 → Paradeplatz · 5 min</span>
+            </div>
+          </div>
+          <div>
+            <div class="transport-row">
               <span class="transport-row__dest">Hotel → Kunsthaus</span>
               <span class="transport-row__via"></span>
               <span class="transport-row__time">Tram 3 → Kunsthaus · 10 min</span>
             </div>
-          </div>
-          <div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Kunsthaus → Old Town</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Walk · 18 min</span>
+            </div>
             <div class="transport-row">
               <span class="transport-row__dest">Hotel → Old Town</span>
               <span class="transport-row__via"></span>
@@ -693,7 +1030,17 @@
               <span class="transport-row__time">Walk · 10 min</span>
             </div>
             <div class="transport-row">
-              <span class="transport-row__dest">Hotel → Airport</span>
+              <span class="transport-row__dest">Hotel → Fischerstube</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Tram/bus · ~15 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Hotel → Museum Rietberg</span>
+              <span class="transport-row__via"></span>
+              <span class="transport-row__time">Tram 7 · ~20 min</span>
+            </div>
+            <div class="transport-row">
+              <span class="transport-row__dest">Hotel → ZRH Airport</span>
               <span class="transport-row__via"></span>
               <span class="transport-row__time">Walk to HB + Express · 28 min</span>
             </div>
@@ -715,6 +1062,14 @@
           <p class="emergency-item__number">117</p>
           <p class="emergency-item__label">Police</p>
         </div>
+        <div class="emergency-item">
+          <p class="emergency-item__number">118</p>
+          <p class="emergency-item__label">Fire</p>
+        </div>
+        <div class="emergency-item">
+          <p class="emergency-item__number">111</p>
+          <p class="emergency-item__label">Out-of-hours Doctor</p>
+        </div>
       </div>
 
       <!-- Survival Guide -->
@@ -734,6 +1089,7 @@
                 <p><strong>Zürich Card 72 hr</strong> covers all trams, buses, S-Bahn, boats on Lake Zürich, the Uetliberg railway, and over 40 museums — including Kunsthaus and Museum Rietberg.</p>
                 <p><strong>Activate</strong> your card in the ZVV app the moment you land at the airport. It starts counting from activation, not purchase.</p>
                 <p><strong>Home tram stop:</strong> Sihlquai/HB — 3 minutes from the hotel. Trams 4, 11, 13, and 17 all stop here.</p>
+                <p><strong>Note:</strong> Bahnhofquai/HB tram stop is closed until December 2026. Use Sihlquai/HB instead.</p>
                 <p><strong>Zürich HB</strong> (main station) is a 5-minute walk. Airport Express departs every 10 minutes, takes 12 minutes to the airport.</p>
                 <p><strong>Tipping on transport:</strong> Not expected. Swiss public transport runs like clockwork.</p>
               </div>
@@ -765,8 +1121,10 @@
               <div class="accordion__content__inner">
                 <p><strong>ZVV App</strong> — Zürich Card activation and live tram/train schedules.</p>
                 <p><strong>SBB Mobile</strong> — Swiss Federal Railways. Real-time departures, platform info, connections.</p>
-                <p><strong>Google Maps</strong> — Offline maps of Zürich downloaded before departure.</p>
+                <p><strong>Google Maps</strong> — Download offline maps for Zürich AND Copenhagen before departure.</p>
+                <p><strong>Google Translate</strong> — Download offline German pack for restaurant menus and signs.</p>
                 <p><strong>Rejseplanen</strong> — Copenhagen public transport (for the stopover).</p>
+                <p><strong>Rejsekort / Rejsebillet</strong> — Copenhagen metro tickets and travel cards on your phone.</p>
               </div>
             </div>
           </div>
@@ -787,18 +1145,58 @@
             </div>
           </div>
 
-          <!-- Phones & Connectivity -->
+          <!-- eSIM & Connectivity -->
           <div class="accordion__item">
             <button class="accordion__header" aria-expanded="false">
-              Phones &amp; Connectivity
+              eSIM &amp; Connectivity
               <span class="accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion__content">
               <div class="accordion__content__inner">
-                <p><strong>Wi-Fi:</strong> Available at both hotels and most cafés/restaurants.</p>
-                <p><strong>Roaming:</strong> Check your carrier's international plan. Switzerland is NOT part of the EU, so EU roaming packages may not apply.</p>
+                <p><strong>eSIM providers:</strong> Airalo, Holafly, Saily — install before departure. Best option for reliable data.</p>
+                <p><strong>US carrier plans:</strong> T-Mobile (international included on some plans), AT&amp;T International Day Pass, Verizon TravelPass.</p>
+                <p><strong>eSIM compatibility:</strong> Check your phone supports eSIM before purchasing. iPhone XS and later, most recent Android flagships.</p>
+                <p><strong>Google Maps:</strong> Download offline maps for Zürich AND Copenhagen before departure.</p>
+                <p><strong>Google Translate:</strong> Download offline German pack.</p>
+                <p><strong>Turn off cellular data</strong> when not using Wi-Fi to avoid surprise charges.</p>
+                <p><strong>Switzerland is NOT in the EU</strong> — EU roaming may not apply. Check with your carrier.</p>
                 <p><strong>Denmark:</strong> EU roaming should work with most US carriers' international plans. Verify before departure.</p>
+                <p><strong>Wi-Fi:</strong> Available at both hotels and most cafés/restaurants.</p>
                 <p><strong>Emergency:</strong> 112 works from any phone, even without a SIM card.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cultural Tips -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Cultural Tips
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>Zürich Card fine</strong> for traveling without a valid ticket: CHF 90. Always have your card activated.</p>
+                <p><strong>Trams leave on the exact second</strong> — be at the stop early. The Swiss don't wait.</p>
+                <p><strong>Keep voices low</strong> on public transport — Swiss etiquette. Phone calls are frowned upon.</p>
+                <p><strong>Crossing on red is illegal</strong> and will draw stares (and potentially a fine). Wait for green, even at 2 AM with no cars.</p>
+                <p><strong>Tap water is safe and excellent everywhere</strong> — over 1,200 public fountains serve drinkable water. Ask for "Hahnenwasser" at restaurants.</p>
+                <p><strong>Sunday is quiet</strong> — respect the tradition. No lawn mowing, no loud music, no laundry in shared buildings.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lost Passport / Medical -->
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              Lost Passport &amp; Medical
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__content__inner">
+                <p><strong>US Embassy Denmark:</strong> Dag Hammarskjölds Allé 24, 2100 Copenhagen · <a href="tel:+4533417100">+45 3341 7100</a></p>
+                <p><strong>US Embassy Switzerland:</strong> Sulgeneckstrasse 19, 3007 Bern · <a href="tel:+41313577011">+41 31 357 7011</a></p>
+                <p><strong>Nearest hospital Zürich:</strong> Universitätsspital Zürich, Rämistrasse 100. 24-hour emergency department.</p>
+                <p><strong>Palm Sunday processions</strong> may affect some streets in the old town area.</p>
               </div>
             </div>
           </div>
@@ -813,7 +1211,7 @@
               <div class="accordion__content__inner">
                 <p><strong>Daylight Saving:</strong> Clocks spring forward on Sunday 29 March at 2:00 AM. You lose one hour — double-check your alarm for the flight.</p>
                 <p><strong>Water:</strong> Zürich's tap water is excellent — better than bottled. Over 1,200 public fountains serve drinkable water throughout the city.</p>
-                <p><strong>Language:</strong> Swiss German is the local dialect, but English is widely spoken, especially in hospitality.</p>
+                <p><strong>Language:</strong> Swiss German is the local dialect, but English is widely spoken, especially in hospitality. "Grüezi" (hello) and "Merci vielmal" (thank you) go a long way.</p>
                 <p><strong>Dress code:</strong> Smart casual for all restaurants on this trip. No need for formal attire, but Zürich appreciates looking put-together.</p>
                 <p><strong>Altitude:</strong> Uetliberg is only 871 m — no altitude concerns. Wear sturdy shoes for the summit walk.</p>
               </div>
@@ -821,6 +1219,486 @@
           </div>
 
         </div>
+      </div>
+
+      <!-- ============================================================
+           LANGUAGE PHRASES & PRONUNCIATIONS
+           ============================================================ -->
+
+      <!-- Danish Language Phrases -->
+      <div style="margin-top: var(--space-16);">
+        <h3 class="section__eyebrow reveal" style="margin-bottom: var(--space-2);">Language</h3>
+        <h3 class="table-section-heading reveal">Danish Phrases</h3>
+        <p class="reveal" style="font-family: var(--font-body); font-size: var(--text-sm); color: #666; margin-bottom: var(--space-4); max-width: var(--content-default);">Most Danes speak excellent English, but a few words in Danish are always appreciated. Danish pronunciation is notoriously tricky — these approximations will get you close enough.</p>
+        <div style="overflow-x: auto;">
+          <table class="phrase-table reveal">
+            <thead>
+              <tr>
+                <th>English</th>
+                <th>Danish</th>
+                <th>Say It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hello</td>
+                <td>Hej</td>
+                <td>HI</td>
+              </tr>
+              <tr>
+                <td>Thank you</td>
+                <td>Tak</td>
+                <td>TAK</td>
+              </tr>
+              <tr>
+                <td>Please</td>
+                <td>Vær så venlig</td>
+                <td>VAIR so VEN-lee</td>
+              </tr>
+              <tr>
+                <td>Excuse me</td>
+                <td>Undskyld</td>
+                <td>OON-skool</td>
+              </tr>
+              <tr>
+                <td>Yes / No</td>
+                <td>Ja / Nej</td>
+                <td>YA / NIE</td>
+              </tr>
+              <tr>
+                <td>Good morning</td>
+                <td>Godmorgen</td>
+                <td>GO-morn</td>
+              </tr>
+              <tr>
+                <td>Goodbye</td>
+                <td>Farvel</td>
+                <td>far-VEL</td>
+              </tr>
+              <tr>
+                <td>How much?</td>
+                <td>Hvor meget?</td>
+                <td>VOOR MY-et</td>
+              </tr>
+              <tr>
+                <td>Cheers!</td>
+                <td>Skål!</td>
+                <td>SKOHL</td>
+              </tr>
+              <tr>
+                <td>Do you speak English?</td>
+                <td>Taler du engelsk?</td>
+                <td>TAY-ler doo ENG-elsk</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Swiss German Phrases -->
+      <div style="margin-top: var(--space-12);">
+        <h3 class="table-section-heading reveal">Swiss German Phrases</h3>
+        <p class="reveal" style="font-family: var(--font-body); font-size: var(--text-sm); color: #666; margin-bottom: var(--space-4); max-width: var(--content-default);">Swiss German (Schwyzerdütsch) differs significantly from standard German. These basics will earn you smiles. Everyone speaks English in Zürich, but locals appreciate the effort.</p>
+        <div style="overflow-x: auto;">
+          <table class="phrase-table reveal">
+            <thead>
+              <tr>
+                <th>English</th>
+                <th>Swiss German</th>
+                <th>Say It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hello</td>
+                <td>Grüezi</td>
+                <td>GREW-tsi</td>
+              </tr>
+              <tr>
+                <td>Thank you</td>
+                <td>Merci vielmal</td>
+                <td>MAIR-see FEEL-mahl</td>
+              </tr>
+              <tr>
+                <td>Please</td>
+                <td>Bitte</td>
+                <td>BIT-teh</td>
+              </tr>
+              <tr>
+                <td>Goodbye</td>
+                <td>Uf Wiederluege</td>
+                <td>oof VEE-der-loo-eh-geh</td>
+              </tr>
+              <tr>
+                <td>Cheers!</td>
+                <td>Prost!</td>
+                <td>PROHST</td>
+              </tr>
+              <tr>
+                <td>Excuse me</td>
+                <td>Exgüsi</td>
+                <td>EX-goo-see</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Place Name Pronunciations — Copenhagen -->
+      <div style="margin-top: var(--space-16);">
+        <h3 class="section__eyebrow reveal" style="margin-bottom: var(--space-2);">Pronunciations</h3>
+        <h3 class="table-section-heading reveal">Copenhagen Place Names</h3>
+        <p class="reveal" style="font-family: var(--font-body); font-size: var(--text-sm); color: #666; margin-bottom: var(--space-4); max-width: var(--content-default);">Say these with confidence and you'll navigate like a local. The ø sounds like the "u" in "fur".</p>
+        <div style="overflow-x: auto;">
+          <table class="phrase-table reveal">
+            <thead>
+              <tr>
+                <th>Place</th>
+                <th>Say It</th>
+                <th>What It Is</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>København</td>
+                <td>kuh-ben-HOWN</td>
+                <td>Copenhagen in Danish</td>
+              </tr>
+              <tr>
+                <td>Nørreport</td>
+                <td>NUR-eh-port</td>
+                <td>Main transit hub / hotel station</td>
+              </tr>
+              <tr>
+                <td>Nyhavn</td>
+                <td>NOO-hown</td>
+                <td>Iconic colorful harbor</td>
+              </tr>
+              <tr>
+                <td>Strøget</td>
+                <td>STROY-et</td>
+                <td>Main pedestrian shopping street</td>
+              </tr>
+              <tr>
+                <td>Torvehallerne</td>
+                <td>TOR-veh-hal-er-neh</td>
+                <td>Covered food market</td>
+              </tr>
+              <tr>
+                <td>Amagerbro</td>
+                <td>ah-MAH-er-bro</td>
+                <td>Charlotte's neighborhood station</td>
+              </tr>
+              <tr>
+                <td>Frederiksberg</td>
+                <td>FREH-riks-bair</td>
+                <td>Union Kitchen neighborhood</td>
+              </tr>
+              <tr>
+                <td>Tivoli</td>
+                <td>TIV-oh-lee</td>
+                <td>Famous amusement gardens</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Place Name Pronunciations — Zürich -->
+      <div style="margin-top: var(--space-12);">
+        <h3 class="table-section-heading reveal">Zürich Place Names</h3>
+        <p class="reveal" style="font-family: var(--font-body); font-size: var(--text-sm); color: #666; margin-bottom: var(--space-4); max-width: var(--content-default);">Swiss German pronunciation rewards effort. The "ch" is a soft, raspy sound from the back of the throat (like the Scottish "loch"). The "ü" sounds like "oo" with pursed lips.</p>
+        <div style="overflow-x: auto;">
+          <table class="phrase-table reveal">
+            <thead>
+              <tr>
+                <th>Place</th>
+                <th>Say It</th>
+                <th>What It Is</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Zürich</td>
+                <td>TSOO-rikh</td>
+                <td>The city (not "ZOO-rick")</td>
+              </tr>
+              <tr>
+                <td>Uetliberg</td>
+                <td>OOT-lee-bairg</td>
+                <td>Summit mountain above the city</td>
+              </tr>
+              <tr>
+                <td>Bahnhofstrasse</td>
+                <td>BAHN-hof-SHTRAH-seh</td>
+                <td>Main luxury shopping street</td>
+              </tr>
+              <tr>
+                <td>Sprüngli</td>
+                <td>SHPRUNG-lee</td>
+                <td>Legendary confiserie</td>
+              </tr>
+              <tr>
+                <td>Kunsthaus</td>
+                <td>KOONST-hows</td>
+                <td>Art museum</td>
+              </tr>
+              <tr>
+                <td>Grossmünster</td>
+                <td>GROSS-mun-ster</td>
+                <td>Twin-towered cathedral</td>
+              </tr>
+              <tr>
+                <td>Fraumünster</td>
+                <td>FROW-mun-ster</td>
+                <td>Church with Chagall windows</td>
+              </tr>
+              <tr>
+                <td>Münsterhof</td>
+                <td>MUN-ster-hof</td>
+                <td>Square near Fraumünster</td>
+              </tr>
+              <tr>
+                <td>Lindenhof</td>
+                <td>LIN-den-hof</td>
+                <td>Hilltop viewpoint</td>
+              </tr>
+              <tr>
+                <td>Zeughauskeller</td>
+                <td>TSOYG-hows-keller</td>
+                <td>Saturday dinner (armory cellar)</td>
+              </tr>
+              <tr>
+                <td>Niederdorf</td>
+                <td>NEE-der-dorf</td>
+                <td>Old Town lanes</td>
+              </tr>
+              <tr>
+                <td>Sihlquai</td>
+                <td>ZEEL-kai</td>
+                <td>Hotel's tram stop area</td>
+              </tr>
+              <tr>
+                <td>Bürkliplatz</td>
+                <td>BURK-lee-plahts</td>
+                <td>Lakefront square / boat pier</td>
+              </tr>
+              <tr>
+                <td>Polybahn</td>
+                <td>POH-lee-bahn</td>
+                <td>Funicular to ETH</td>
+              </tr>
+              <tr>
+                <td>Limmat</td>
+                <td>LIM-aht</td>
+                <td>River through the city</td>
+              </tr>
+              <tr>
+                <td>Neumühlequai</td>
+                <td>NOY-moo-leh-kai</td>
+                <td>Hotel street</td>
+              </tr>
+              <tr>
+                <td>Rietberg</td>
+                <td>REET-bairg</td>
+                <td>Art museum in Rieter Park</td>
+              </tr>
+              <tr>
+                <td>Bellevue</td>
+                <td>bel-eh-VOO</td>
+                <td>Tram hub by the lake</td>
+              </tr>
+              <tr>
+                <td>Paradeplatz</td>
+                <td>pah-RAH-deh-plahts</td>
+                <td>Financial district tram stop</td>
+              </tr>
+              <tr>
+                <td>Quaianlagen</td>
+                <td>KAI-ahn-lah-gen</td>
+                <td>Lakefront park promenade</td>
+              </tr>
+              <tr>
+                <td>Fischerstube</td>
+                <td>FISH-er-shtoo-beh</td>
+                <td>Lakeside fish restaurant</td>
+              </tr>
+              <tr>
+                <td>Geschnetzeltes</td>
+                <td>geh-SHNET-sel-tes</td>
+                <td>Zürich's signature veal dish</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Food & Drink Terms -->
+      <div style="margin-top: var(--space-16);">
+        <h3 class="section__eyebrow reveal" style="margin-bottom: var(--space-2);">Culinary</h3>
+        <h3 class="table-section-heading reveal">Food &amp; Drink Terms</h3>
+        <p class="reveal" style="font-family: var(--font-body); font-size: var(--text-sm); color: #666; margin-bottom: var(--space-4); max-width: var(--content-default);">Know what you're ordering. Swiss and Danish cuisines both reward adventurous eaters.</p>
+        <div style="overflow-x: auto;">
+          <table class="phrase-table reveal">
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Say It</th>
+                <th>What It Is</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Luxemburgerli</td>
+                <td>LUX-em-burger-lee</td>
+                <td>Sprüngli's bite-size macarons</td>
+              </tr>
+              <tr>
+                <td>Geschnetzeltes</td>
+                <td>geh-SHNET-sel-tes</td>
+                <td>Sliced veal in cream sauce — Zürich's signature</td>
+              </tr>
+              <tr>
+                <td>Rösti</td>
+                <td>RUSH-tee</td>
+                <td>Crispy grated potato cake</td>
+              </tr>
+              <tr>
+                <td>Fondue</td>
+                <td>fon-DOO</td>
+                <td>Melted cheese with bread for dipping</td>
+              </tr>
+              <tr>
+                <td>Raclette</td>
+                <td>rah-KLET</td>
+                <td>Melted cheese scraped onto potatoes</td>
+              </tr>
+              <tr>
+                <td>Birchermüesli</td>
+                <td>BEER-kher-MOOS-lee</td>
+                <td>Swiss original muesli with yogurt</td>
+              </tr>
+              <tr>
+                <td>Rivella</td>
+                <td>ree-VEL-ah</td>
+                <td>Swiss national soft drink (milk whey-based)</td>
+              </tr>
+              <tr>
+                <td>Smørrebrød</td>
+                <td>SMUR-eh-bruth</td>
+                <td>Danish open-faced sandwich</td>
+              </tr>
+              <tr>
+                <td>Wienerbrød</td>
+                <td>VEE-ner-bruth</td>
+                <td>Danish pastry (literally "Viennese bread")</td>
+              </tr>
+              <tr>
+                <td>Rugbrød</td>
+                <td>ROO-bruth</td>
+                <td>Dense Danish rye bread</td>
+              </tr>
+              <tr>
+                <td>Øllebrød</td>
+                <td>UH-leh-bruth</td>
+                <td>Traditional Danish rye bread porridge</td>
+              </tr>
+              <tr>
+                <td>Kartoffelmad</td>
+                <td>kar-TOF-el-mad</td>
+                <td>Potato on rye — classic Danish lunch</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       IMPORTANT INFO
+       ============================================================ -->
+  <section class="section section--dark" id="important-info">
+    <div class="section__inner">
+      <p class="section__eyebrow reveal">Before You Go</p>
+      <h2 class="section__title reveal">Important Information</h2>
+      <p class="section__subtitle reveal">Entry requirements, immigration updates, and travel advisories for Americans visiting Denmark and Switzerland in March 2026.</p>
+
+      <div class="info-cards-grid" style="margin-top: var(--space-10);">
+
+        <!-- Entry Requirements -->
+        <div class="info-card reveal">
+          <p class="info-card__label">Entry Requirements</p>
+          <h3 class="info-card__title">Americans in the Schengen Area</h3>
+          <div class="info-card__body">
+            <p><strong>No visa required</strong> for short stays up to 90 days in any 180-day period for both Denmark (EU/Schengen) and Switzerland (Schengen).</p>
+            <p><strong>Passport validity:</strong> Must be valid at least 3 months beyond planned departure date from the Schengen area. The U.S. embassy recommends at least 6 months validity at time of entry.</p>
+            <p><strong>Sufficient funds &amp; return ticket:</strong> Immigration may ask for proof of sufficient funds and a return plane ticket.</p>
+            <p><strong>90-day Schengen rule:</strong> Total stay across ALL Schengen countries cannot exceed 90 days in any 180-day period.</p>
+          </div>
+        </div>
+
+        <!-- EU Entry/Exit System -->
+        <div class="info-card reveal reveal-delay-1">
+          <p class="info-card__label">EU Immigration</p>
+          <h3 class="info-card__title">EU Entry/Exit System (EES)</h3>
+          <div class="info-card__body">
+            <p>Launched <strong>October 12, 2025</strong>.</p>
+            <p>U.S. citizens will have fingerprints, facial image, passport details, and entry/exit dates collected upon entry to the Schengen area.</p>
+            <p><strong>No fee required.</strong> No advance action needed.</p>
+            <p>System is being introduced gradually — expect possible queues at immigration on arrival.</p>
+          </div>
+        </div>
+
+        <!-- ETIAS -->
+        <div class="info-card reveal reveal-delay-2">
+          <p class="info-card__label">Future Requirement</p>
+          <h3 class="info-card__title">ETIAS (European Travel Information and Authorization System)</h3>
+          <div class="info-card__body">
+            <p><strong>NOT required for this trip</strong> (March 2026).</p>
+            <p>Scheduled to launch late 2026.</p>
+            <p>Once active: online pre-travel screening, ~€7 fee, valid 3 years.</p>
+            <p>Will be required for visa-exempt nationals (including Americans) visiting Schengen countries.</p>
+          </div>
+        </div>
+
+        <!-- Denmark & Americans -->
+        <div class="info-card reveal">
+          <p class="info-card__label">Travel Advisory</p>
+          <h3 class="info-card__title">Denmark &amp; Americans</h3>
+          <div class="info-card__body">
+            <p>Denmark welcomes American travelers — no restrictions despite Greenland political tensions.</p>
+            <p>VisitDenmark publicly confirmed Americans remain welcome.</p>
+            <p>No reports of anti-American sentiment; tourism infrastructure operating normally.</p>
+            <p>Bookings from U.S. travelers are up in 2026.</p>
+          </div>
+        </div>
+
+        <!-- Daylight Saving Time -->
+        <div class="info-card reveal reveal-delay-1">
+          <p class="info-card__label">Time Change</p>
+          <h3 class="info-card__title">Daylight Saving Time</h3>
+          <div class="info-card__body">
+            <p>Clocks spring forward on <strong>Sunday 29 March at 2:00 AM</strong>.</p>
+            <p>You lose one hour — double-check your alarm for the flight.</p>
+            <p>Your phone should update automatically if connected to Wi-Fi or cellular network.</p>
+          </div>
+        </div>
+
+        <!-- Palm Sunday -->
+        <div class="info-card reveal reveal-delay-2">
+          <p class="info-card__label">Sunday 29 March</p>
+          <h3 class="info-card__title">Palm Sunday</h3>
+          <div class="info-card__body">
+            <p>Most shops closed in Zürich.</p>
+            <p>Restaurants, museums, and public transport run normally.</p>
+            <p>Verify hours for specific venues 48 hours before.</p>
+            <p>Palm Sunday processions may affect some streets in the old town area.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -849,10 +1727,16 @@
         <a href="#essentials" style="display:block;">Zürich Card</a>
         <a href="#essentials" style="display:block;">Survival Guide</a>
       </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Reference</p>
+        <a href="#essentials" style="display:block;">Language Phrases</a>
+        <a href="#essentials" style="display:block;">Pronunciations</a>
+        <a href="#important-info" style="display:block;">Important Info</a>
+      </div>
     </div>
     <div class="footer__bottom">
       <a href="#" class="footer__brand">Zürich Weekend</a>
-      <p>Powered by Alterra Digital · V5.0</p>
+      <p>Powered by Alterra Digital · V6.0</p>
     </div>
   </footer>
 
@@ -975,7 +1859,7 @@
     /* -----------------------------------------------
        DAY NAV PILL ACTIVE STATE
        ----------------------------------------------- */
-    const sectionIds = ['overview', 'copenhagen', 'friday', 'saturday', 'sunday', 'essentials'];
+    const sectionIds = ['overview', 'copenhagen', 'friday', 'saturday', 'sunday', 'essentials', 'important-info'];
     const sectionEls = sectionIds.map(function (id) {
       return document.getElementById(id);
     }).filter(Boolean);

@@ -44,6 +44,9 @@
   --color-white:     #ffffff;
   --color-divider:   #d4cdc4;
 
+  /* Rose accent for navigation */
+  --color-rose:      #c47e7e;
+
   /* Radius */
   --radius-sm: 2px;
   --radius-md: 4px;
@@ -91,14 +94,22 @@
   padding-bottom: var(--space-3);
 }
 
-.nav--scrolled .nav__logo,
-.nav--scrolled .nav__links a,
-.nav--scrolled .nav__cta {
+.nav--scrolled .nav__logo {
   color: var(--color-dark);
 }
 
+.nav--scrolled .nav__links a {
+  color: var(--color-rose);
+}
+
 .nav--scrolled .nav__cta {
-  border-color: var(--color-dark);
+  color: var(--color-rose);
+  border-color: var(--color-rose);
+}
+
+.nav--scrolled .nav__cta:hover {
+  background: var(--color-rose);
+  color: var(--color-white);
 }
 
 .nav__logo {
@@ -195,7 +206,7 @@
 .mobile-menu a {
   font-family: var(--font-body);
   font-size: var(--text-lg);
-  color: var(--color-dark);
+  color: var(--color-rose);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -729,6 +740,11 @@
   color: var(--color-olive);
 }
 
+.status-recommended {
+  color: var(--color-accent-dark);
+  font-weight: 500;
+}
+
 /* ============================================================
    TRANSPORT REFERENCE
    ============================================================ */
@@ -879,7 +895,7 @@
   max-width: var(--content-wide);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: var(--space-10);
 }
 
@@ -930,8 +946,12 @@
 }
 
 @media (max-width: 768px) {
-  .footer__inner { grid-template-columns: 1fr; gap: var(--space-8); }
+  .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
   .footer__bottom { flex-direction: column; gap: var(--space-4); text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .footer__inner { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
@@ -1073,6 +1093,22 @@
   margin-top: var(--space-1);
 }
 
+/* Weather detail row (for section-specific weather cards) */
+.weather-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-2);
+}
+
+.weather-detail span {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
 /* ============================================================
    DAY NAV PILLS (floating when inside day sections)
    ============================================================ */
@@ -1095,7 +1131,7 @@
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-dark);
+  color: var(--color-rose);
   padding: var(--space-2) var(--space-4);
   text-decoration: none;
   border: 1px solid transparent;
@@ -1105,12 +1141,12 @@
 }
 
 .day-nav__pill:hover {
-  border-color: var(--color-divider);
+  border-color: var(--color-rose);
 }
 
 .day-nav__pill.active {
-  border-color: var(--color-dark);
-  background: var(--color-dark);
+  border-color: var(--color-rose);
+  background: var(--color-rose);
   color: var(--color-white);
 }
 
@@ -1126,7 +1162,7 @@
 }
 
 /* ============================================================
-   RAIN ALTERNATIVE CARD
+   RAIN / EXTRA TIME ALTERNATIVE CARD
    ============================================================ */
 .alt-card {
   background: var(--color-cream);
@@ -1150,6 +1186,239 @@
   font-size: var(--text-sm);
   color: #4a4a4a;
   line-height: 1.7;
+}
+
+.alt-card--extra {
+  border-left-color: var(--color-rose);
+}
+
+.alt-card--extra .alt-card__label {
+  color: var(--color-rose);
+}
+
+/* ============================================================
+   NEARBY GRID (for nearby points of interest)
+   ============================================================ */
+.nearby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.nearby-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-cream);
+  border: 1px solid var(--color-divider);
+}
+
+.nearby-item__name {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.nearby-item__distance {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: var(--space-3);
+}
+
+/* ============================================================
+   CLOSING NOTE
+   ============================================================ */
+.closing-note {
+  max-width: var(--content-narrow);
+  margin: var(--space-8) auto 0;
+  padding: var(--space-6) var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  text-align: center;
+}
+
+.closing-note p {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   VERIFICATION NOTE
+   ============================================================ */
+.verification-note {
+  max-width: var(--content-narrow);
+  margin: var(--space-6) auto 0;
+  padding: var(--space-4) var(--space-6);
+  background: #fdf6e3;
+  border-left: 3px solid var(--color-accent);
+}
+
+.verification-note p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   IMPORTANT INFO SECTION (dark theme cards)
+   ============================================================ */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-6);
+  max-width: var(--content-wide);
+  margin: 0 auto;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: var(--space-8);
+}
+
+.info-card__label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+  font-weight: 500;
+}
+
+.info-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+  font-weight: 400;
+}
+
+.info-card__body {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+}
+
+.info-card__body p {
+  margin-bottom: var(--space-3);
+}
+
+.info-card__body strong {
+  color: var(--color-white);
+}
+
+.info-card__body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card__body ul li {
+  padding-left: var(--space-4);
+  position: relative;
+  margin-bottom: var(--space-2);
+}
+
+.info-card__body ul li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ============================================================
+   LANGUAGE / PRONUNCIATION / FOOD TABLES
+   ============================================================ */
+.phrase-table {
+  width: 100%;
+  max-width: var(--content-default);
+  margin: var(--space-8) auto 0;
+  border-collapse: collapse;
+}
+
+.phrase-table th {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-olive);
+  font-weight: 500;
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 2px solid var(--color-divider);
+}
+
+.phrase-table td {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+  color: #4a4a4a;
+  vertical-align: top;
+}
+
+.phrase-table td:first-child {
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.phrase-table td:last-child {
+  font-family: var(--font-body);
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.phrase-table caption {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-dark);
+  text-align: left;
+  padding-bottom: var(--space-4);
+  font-weight: 400;
+}
+
+/* Table section heading within essentials */
+.table-section-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-dark);
+  margin-bottom: var(--space-2);
+  font-weight: 400;
+  padding-top: var(--space-4);
+}
+
+/* ============================================================
+   SECTION ROUTE SUMMARY
+   ============================================================ */
+.route-summary {
+  max-width: var(--content-narrow);
+  margin: 0 auto var(--space-8);
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-cream);
+  border: 1px solid var(--color-divider);
+  text-align: center;
+}
+
+.route-summary p {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-dark);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
 }
 
 /* ============================================================
