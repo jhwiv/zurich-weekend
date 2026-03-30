@@ -2180,19 +2180,34 @@
     window.addEventListener('hashchange', revealHashTarget);
     revealHashTarget();
 
-    /* Also force reveals on any internal link click */
+    /* Custom scroll for internal links — accounts for all fixed elements */
+    var scrollOffset = 250; /* nav + flight pill + day-nav on mobile */
+    if (window.innerWidth > 768) scrollOffset = 160;
+
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        setTimeout(revealHashTarget, 100);
+      link.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        var target = document.querySelector(href);
+        if (!target) return;
+
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.scrollY - scrollOffset;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+
+        /* Update URL hash without scrolling */
+        history.pushState(null, '', href);
+
+        /* Force reveals visible */
         setTimeout(function() {
-          /* Also trigger observer manually for anything still hidden */
+          revealHashTarget();
           document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
             var rect = el.getBoundingClientRect();
             if (rect.top < window.innerHeight + 200 && rect.bottom > -200) {
               el.classList.add('visible');
             }
           });
-        }, 300);
+        }, 400);
       });
     });
 

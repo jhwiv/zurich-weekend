@@ -472,7 +472,7 @@
    SECTION LAYOUTS
    ============================================================ */
 .section {
-  scroll-margin-top: 140px;
+  scroll-margin-top: 160px;
   padding: clamp(var(--space-16), 8vw, var(--space-32)) var(--space-8);
 }
 
@@ -535,7 +535,7 @@
 
 /* Full-bleed image section divider */
 .image-divider {
-  scroll-margin-top: 140px;
+  scroll-margin-top: 160px;
   width: 100%;
   height: clamp(300px, 40vw, 550px);
   overflow: hidden;
@@ -2524,9 +2524,9 @@
   margin-bottom: var(--space-6);
 }
 
-/* Mobile scroll-margin for sections with taller sticky nav */
+/* Scroll-margin for sections — account for fixed nav (62) + flight pill (45) + sticky day-nav (133) = ~240px */
 @media (max-width: 768px) {
-  .section, .image-divider, [id] {
-    scroll-margin-top: 220px;
+  .section, .image-divider {
+    scroll-margin-top: 250px;
   }
 }
